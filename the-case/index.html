@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Case — Bring Leon Home</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="../assets/site.css">
+</head><body>
+<header class="blh-header"><a class="blh-brand" href="../">Bring Leon Home</a><nav class="blh-nav"><a href="../">Home</a><a href="../the-case/">The Case</a><a href="../take-action/">Take Action</a><a href="../press-v2/">Press</a><a href="../gallery/">Gallery</a><a href="../legal-proceedings-to-bring-leon-home/">Court Case Details</a><a href="../documentary-video-1/">Documentary Video</a><a href="../unpleasant-video/">Unpleasant Video</a><a href="../leons-video/">Leon&#x27;s Video</a><a href="../february-2nd-update/">February 2nd Update</a><a href="../may-5th-leon-update/">May 5th Leon Update</a><a href="../contact/">Contact</a></nav></header>
+<main class="blh-main">
+<div class="blh-block blh-code">
+<style>
+  :root {
+    --cream:#faf7f2;--cream-2:#f1ece1;--ink:#1a1a1a;--ink-2:#4a4a4a;--muted:#6b6b6b;
+    --red:#a52a17;--red-dark:#7a1f10;--brown:#2d1a0f;--tan:#d4b896;--tan-soft:#faf6ec;
+    --green:#2f7d4f;--green-dark:#235c3a;--orange:#b8541a;--orange-dark:#8a3e12;--orange-light:#f5e8d8;
+    --purple:#6b3aa0;--blue:#1e5ea0;
+    --shadow:0 2px 8px rgba(45,26,15,.08);--shadow-lg:0 8px 24px rgba(45,26,15,.12);
+  }
+  *{box-sizing:border-box}html{scroll-behavior:smooth}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55;-webkit-font-smoothing:antialiased}
+  .serif{font-family:Georgia,"Times New Roman",serif}
+  a{color:var(--red);text-decoration:none}a:hover{text-decoration:underline}
+  /* ============ NAV ============ */
+  .nav{position:sticky;top:0;z-index:100;background:rgba(250,247,242,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--tan)}
+  .nav-inner{max-width:1180px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+  .brand{font-family:Georgia,serif;font-size:18px;font-weight:700;color:var(--brown);display:flex;align-items:center;gap:10px;cursor:pointer}
+  .brand-mark{width:28px;height:28px;background:var(--red);border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:13px;font-family:Georgia,serif}
+  .nav-links{display:flex;gap:26px;align-items:center;list-style:none;padding:0;margin:0}
+  .nav-links a{color:var(--ink);font-size:14px;font-weight:500;padding:6px 0;border-bottom:2px solid transparent;cursor:pointer}
+  .nav-links a:hover{border-bottom-color:var(--red);text-decoration:none}
+  .nav-links a.current{color:var(--red);border-bottom-color:var(--red)}
+  body.page-fyoc .nav-links a.current{color:var(--orange);border-bottom-color:var(--orange)}
+  .lang-toggle{display:inline-flex;border:1px solid var(--tan);border-radius:6px;overflow:hidden;font-size:12px;font-weight:600}
+  .lang-toggle button{background:transparent;border:0;padding:6px 12px;color:var(--muted);cursor:pointer;font:inherit;letter-spacing:.04em}
+  .lang-toggle button.active{background:var(--brown);color:var(--cream)}
+  .hamburger{display:none;background:none;border:0;cursor:pointer;padding:8px;font-size:22px;color:var(--brown)}
+  @media(max-width:820px){.nav-links{display:none}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--tan);padding:18px 28px;gap:14px}.hamburger{display:block}}
+  /* ============ SPA page visibility ============ */
+  .page{display:none}
+  body.page-home #page-home,
+  body.page-case #page-case,
+  body.page-updates #page-updates,
+  body.page-press #page-press,
+  body.page-fyoc #page-fyoc,
+  body.page-take-action #page-take-action{display:block}
+  /* ============ Generic buttons ============ */
+  .btn{display:inline-block;padding:14px 24px;border-radius:6px;font-size:15px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:transform .1s,box-shadow .15s}
+  .btn-primary{background:var(--red);color:#fff;box-shadow:var(--shadow)}
+  .btn-primary:hover{background:var(--red-dark);text-decoration:none;box-shadow:var(--shadow-lg)}
+  .btn-secondary{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+  .btn-secondary:hover{background:var(--ink);color:var(--cream);text-decoration:none}
+  .btn-green{background:var(--green);color:#fff}.btn-green:hover{background:var(--green-dark);text-decoration:none}
+  .btn-orange{background:var(--orange);color:#fff}.btn-orange:hover{background:var(--orange-dark);text-decoration:none}
+  .btn-cream{background:var(--cream);color:var(--brown)}.btn-cream:hover{background:#fff;text-decoration:none}
+  .btn-outline-light{background:transparent;color:var(--cream);border:1.5px solid rgba(244,232,214,.5)}
+  .btn-outline-light:hover{background:var(--cream);color:var(--brown);text-decoration:none}
+  /* ============ HOME ============ */
+  .hero{max-width:1180px;margin:0 auto;padding:60px 28px 50px;display:grid;grid-template-columns:1.3fr 1fr;gap:50px;align-items:center}
+  .hero-eyebrow{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--red);margin-bottom:16px}
+  .hero h1{font-family:Georgia,serif;font-size:clamp(34px,5.4vw,56px);line-height:1.1;color:var(--brown);margin:0 0 18px;letter-spacing:-.015em}
+  .hero-sub{font-size:17px;color:var(--ink-2);margin-bottom:28px;max-width:540px}
+  .cta-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .text-link{color:var(--ink);font-size:14px;font-weight:500;border-bottom:1px solid var(--tan);padding-bottom:2px;cursor:pointer}
+  .ru-inline-link{display:inline-block;margin-top:18px;font-size:13px;color:var(--muted);border-bottom:1px dotted var(--muted);cursor:pointer}
+  .hero-photo{background:linear-gradient(135deg,var(--tan-soft) 0%,var(--tan) 100%);aspect-ratio:4/5;border-radius:8px;box-shadow:var(--shadow-lg);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;text-align:center;padding:24px;position:relative;overflow:hidden}
+  .hero-photo::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 35%,rgba(165,42,23,.08),transparent 60%)}
+  .hero-photo-note{position:relative;z-index:1;font-style:italic;color:var(--ink-2)}
+  @media(max-width:820px){.hero{grid-template-columns:1fr;gap:30px;padding:40px 24px 30px}.hero-photo{aspect-ratio:1/1;max-width:360px;margin:0 auto;order:-1}.cta-row{width:100%}.cta-row .btn-primary{width:100%;text-align:center}}
+  .numbers{background:var(--brown);color:var(--cream);padding:40px 28px}
+  .numbers-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+  .num-cell{text-align:center}
+  .num{font-family:Georgia,serif;font-size:42px;font-weight:700;color:#fff;line-height:1;margin-bottom:8px}
+  .num-label{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:rgba(244,232,214,.85)}
+  .num-final .num{color:var(--red)}
+  @media(max-width:720px){.numbers-inner{grid-template-columns:1fr 1fr;gap:28px}.num{font-size:34px}}
+  .latest{max-width:1180px;margin:0 auto;padding:60px 28px}
+  .section-eyebrow{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:var(--red);margin-bottom:10px}
+  .section-title{font-family:Georgia,serif;font-size:28px;color:var(--brown);margin:0 0 8px}
+  .latest-card{margin-top:24px;display:grid;grid-template-columns:280px 1fr;gap:28px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:var(--shadow);transition:box-shadow .2s;cursor:pointer}
+  .latest-card:hover{box-shadow:var(--shadow-lg)}
+  .latest-thumb{background:linear-gradient(135deg,var(--brown) 0%,var(--red-dark) 100%);color:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;text-align:center;min-height:200px}
+  .latest-thumb .play{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;margin-bottom:14px;font-size:22px}
+  .latest-body{padding:26px 28px;align-self:center}
+  .tag{display:inline-block;background:var(--tan-soft);color:var(--orange-dark);font-size:11px;font-weight:700;padding:3px 10px;border-radius:10px;letter-spacing:.04em;margin-bottom:10px}
+  .latest-body h3{font-family:Georgia,serif;font-size:22px;color:var(--brown);margin:0 0 10px}
+  .latest-body p{color:var(--ink-2);margin:0 0 18px;font-size:14px}
+  @media(max-width:720px){.latest-card{grid-template-columns:1fr}.latest-thumb{min-height:160px}}
+  .pillars-section{background:var(--cream-2);padding:70px 28px}
+  .pillars-inner{max-width:1180px;margin:0 auto}
+  .pillars-bridge{text-align:center;max-width:720px;margin:0 auto 40px}
+  .pillars-bridge .section-title{font-size:26px}
+  .pillars-bridge p{font-family:Georgia,serif;font-size:18px;font-style:italic;color:var(--ink-2);line-height:1.5;margin:14px 0 0}
+  .pillars{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .pillar{background:#fff;border-radius:12px;padding:32px;border-top:5px solid var(--green);box-shadow:var(--shadow)}
+  .pillar.fyoc{border-top-color:var(--orange)}
+  .pillar-eyebrow{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--green-dark);margin-bottom:8px}
+  .pillar.fyoc .pillar-eyebrow{color:var(--orange-dark)}
+  .pillar h3{font-family:Georgia,serif;font-size:24px;color:var(--brown);margin:0 0 12px}
+  .pillar p{color:var(--ink-2);font-size:15px;margin:0 0 20px}
+  .pillar-actions{display:flex;flex-direction:column;gap:10px}
+  .pillar-actions .btn{text-align:center;width:100%}
+  .pillar-meta{font-size:12px;color:var(--muted);margin-top:18px;padding-top:16px;border-top:1px solid var(--cream-2)}
+  @media(max-width:820px){.pillars{grid-template-columns:1fr;gap:20px}}
+  .ru-block{background:var(--brown);color:var(--cream);padding:60px 28px}
+  .ru-inner{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1.5fr;gap:40px;align-items:center}
+  .ru-photo{background:linear-gradient(135deg,#4a2f1f,#2d1a0f);aspect-ratio:1/1;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:13px;color:rgba(244,232,214,.5);font-style:italic;text-align:center;padding:24px}
+  .ru-text h2{font-family:Georgia,serif;font-size:28px;margin:0 0 16px;color:#fff}
+  .ru-text p{color:rgba(244,232,214,.92);font-size:16px;line-height:1.6;margin:0 0 18px}
+  @media(max-width:720px){.ru-inner{grid-template-columns:1fr;gap:24px}.ru-photo{max-width:240px;margin:0 auto}}
+  /* ============ Generic page header ============ */
+  .page-header{max-width:920px;margin:0 auto;padding:54px 28px 24px}
+  .page-header.wide{max-width:1080px}
+  .breadcrumb{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-bottom:14px}
+  .breadcrumb a{cursor:pointer}
+  .page-header h1{font-family:Georgia,serif;font-size:clamp(34px,5vw,52px);color:var(--brown);margin:0 0 14px;line-height:1.1;letter-spacing:-.015em}
+  .page-lede{font-size:18px;color:var(--ink-2);max-width:680px;line-height:1.55}
+  .content-narrow{max-width:920px;margin:0 auto;padding:0 28px 60px}
+  .content-wide{max-width:1080px;margin:0 auto;padding:0 28px 60px}
+  .section{margin:48px 0}
+  .section h2{font-family:Georgia,serif;font-size:26px;color:var(--brown);border-bottom:2px solid var(--tan);padding-bottom:8px;margin:0 0 18px;display:flex;align-items:baseline;justify-content:space-between}
+  .section h2 .top-link{font-size:11px;font-weight:400;color:var(--muted);letter-spacing:.04em;cursor:pointer}
+  .section h2 .top-link:hover{color:var(--red);text-decoration:none}
+  .section h3{font-family:Georgia,serif;font-size:20px;color:var(--brown);margin:26px 0 10px}
+  .section p{margin:0 0 14px;color:var(--ink-2)}
+  /* ============ Case-specific ============ */
+  .toc{max-width:920px;margin:24px auto 30px;padding:0 28px}
+  .toc-inner{background:#fff;border:1px solid var(--tan);border-left:4px solid var(--red);border-radius:0 8px 8px 0;padding:18px 24px}
+  .toc-label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--red-dark);font-weight:700;margin-bottom:10px}
+  .toc ol{margin:0;padding-left:22px;font-size:14px;line-height:1.85;columns:2;column-gap:30px}
+  @media(max-width:720px){.toc ol{columns:1}}
+  .toc a{cursor:pointer}
+  .posture-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:18px 0}
+  @media(max-width:720px){.posture-grid{grid-template-columns:1fr}}
+  .posture-card{background:#fff;border-radius:8px;padding:18px 22px;box-shadow:var(--shadow);border-left:4px solid var(--tan)}
+  .posture-card.active{border-left-color:var(--green)}
+  .posture-card.exhausted{border-left-color:var(--muted);opacity:.85}
+  .posture-card.pending{border-left-color:var(--orange)}
+  .posture-card h3{font-size:16px;margin:0 0 6px;font-family:inherit;font-weight:700}
+  .posture-card .meta{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:8px}
+  .posture-card p{font-size:13.5px;margin:0;color:var(--ink-2)}
+  .posture-card .status{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:2px 8px;border-radius:10px;margin-top:8px}
+  .status.active{background:#eaf5ee;color:var(--green)}
+  .status.exhausted{background:#f1ece1;color:var(--muted)}
+  .status.pending{background:#fff5e6;color:#a86b00}
+  details{background:#fff;border:1px solid var(--tan);border-radius:8px;padding:16px 22px;margin:14px 0;box-shadow:var(--shadow)}
+  details[open]{box-shadow:var(--shadow-lg)}
+  summary{cursor:pointer;font-weight:600;color:var(--brown);font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:22px;color:var(--red);font-weight:300;line-height:1}
+  details[open] summary::after{content:"\002212"}
+  .timeline{margin-top:14px;border-left:2px solid var(--tan);padding-left:22px}
+  .tl-item{margin:0 0 18px;position:relative}
+  .tl-item::before{content:"";position:absolute;left:-29px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--cream);border:2px solid var(--tan)}
+  .tl-item.major::before{background:var(--red);border-color:var(--red)}
+  .tl-date{font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--red);text-transform:uppercase}
+  .tl-title{font-weight:600;font-size:14px;margin:2px 0 4px;color:var(--brown)}
+  .tl-body{font-size:13.5px;color:var(--ink-2);margin:0}
+  .evidence-card{background:var(--tan-soft);border:1px solid var(--tan);border-radius:8px;padding:18px 22px;margin:14px 0}
+  .evidence-card h3{margin:0 0 8px;font-family:inherit;font-size:16px;font-weight:700;color:var(--brown)}
+  .evidence-card p{font-size:13.5px;color:var(--ink-2);margin:0 0 10px}
+  .evidence-card .download{font-size:13px;font-weight:600}
+  .warning{background:#fbe6e2;border-left:4px solid var(--red);padding:12px 18px;border-radius:0 6px 6px 0;font-size:13.5px;color:var(--red-dark);margin:12px 0}
+  .letter-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+  .letter-list li{background:#fff;padding:14px 18px;border-radius:6px;border-left:3px solid var(--orange);box-shadow:var(--shadow);display:flex;justify-content:space-between;gap:14px;align-items:center}
+  .letter-list .meta{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .letter-list .name{font-size:14.5px;color:var(--brown);font-weight:600}
+  .share-cta{background:var(--brown);color:var(--cream);border-radius:12px;padding:32px 36px;margin:40px 0;text-align:center}
+  .share-cta h2{font-family:Georgia,serif;color:#fff;margin:0 0 10px;font-size:24px;border:none;padding:0}
+  .share-cta p{color:rgba(244,232,214,.85);margin:0 0 22px}
+  .share-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  /* ============ Updates-specific ============ */
+  .filters{max-width:1080px;margin:0 auto;padding:0 28px 10px;display:flex;flex-wrap:wrap;gap:8px}
+  .filter-btn{background:#fff;border:1px solid var(--tan);color:var(--ink);padding:7px 14px;border-radius:18px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .15s}
+  .filter-btn:hover{border-color:var(--red);color:var(--red)}
+  .filter-btn.active{background:var(--brown);color:var(--cream);border-color:var(--brown)}
+  .filter-count{font-size:11px;color:var(--muted);margin-left:6px}
+  .filter-btn.active .filter-count{color:rgba(244,232,214,.7)}
+  .feed{max-width:1080px;margin:0 auto;padding:20px 28px 60px;display:grid;gap:18px}
+  .card{background:#fff;border-radius:10px;padding:22px 26px;box-shadow:var(--shadow);display:grid;grid-template-columns:80px 1fr;gap:22px;align-items:start;transition:box-shadow .15s;border-left:4px solid var(--tan)}
+  .card:hover{box-shadow:var(--shadow-lg)}
+  .card.tag-fathervlog{border-left-color:var(--red)}
+  .card.tag-letter{border-left-color:var(--orange)}
+  .card.tag-courtupdate{border-left-color:var(--green)}
+  .card.tag-newsmention{border-left-color:var(--purple)}
+  .card.tag-familymessage{border-left-color:var(--blue)}
+  .card.pinned{background:linear-gradient(135deg,#fff,var(--tan-soft));border-left-width:5px}
+  .card-date{text-align:center}
+  .date-day{font-family:Georgia,serif;font-size:32px;font-weight:700;color:var(--brown);line-height:1}
+  .date-month{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-top:4px;font-weight:600}
+  .date-year{font-size:11px;color:var(--muted);margin-top:2px}
+  .card-body h3{font-family:Georgia,serif;font-size:20px;color:var(--brown);margin:6px 0 8px;line-height:1.3}
+  .card-body p{color:var(--ink-2);font-size:14px;margin:0 0 14px;line-height:1.55}
+  .tag-row{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+  .tag.fathervlog{background:#fbe6e2;color:var(--red-dark)}
+  .tag.letter{background:#fff5e6;color:#8a3e12}
+  .tag.courtupdate{background:#eaf5ee;color:var(--green)}
+  .tag.newsmention{background:#ece4f5;color:var(--purple)}
+  .tag.familymessage{background:#e4eef7;color:var(--blue)}
+  .pinned-badge{font-size:10px;background:var(--brown);color:var(--cream);padding:3px 8px;border-radius:10px;text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+  .ru-badge{font-size:10px;background:var(--red);color:#fff;padding:3px 8px;border-radius:10px;text-transform:uppercase;font-weight:700}
+  .card-link{display:inline-block;color:var(--red);font-weight:600;font-size:13.5px}
+  @media(max-width:640px){.card{grid-template-columns:64px 1fr;padding:18px 20px}.date-day{font-size:26px}}
+  /* Inline video player inside Updates card */
+  .card.has-video{grid-template-columns:1fr;padding:0;overflow:hidden}
+  .card.has-video .video-wrap{position:relative;background:#000;width:100%;aspect-ratio:16/9;border-radius:10px 10px 0 0;overflow:hidden}
+  .card.has-video .video-wrap.portrait{aspect-ratio:9/16;max-height:640px}
+  .card.has-video .video-wrap.square{aspect-ratio:1/1}
+  .card.has-video .video-wrap video,.card.has-video .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;display:block}
+  .card.has-video .card-inline{padding:22px 26px;display:grid;grid-template-columns:80px 1fr;gap:22px;align-items:start}
+  @media(max-width:640px){.card.has-video .card-inline{grid-template-columns:64px 1fr;padding:18px 20px}}
+  .empty-state{text-align:center;padding:60px 20px;color:var(--muted);font-size:15px;display:none}
+  .empty-state.show{display:block}
+  /* ============ Press-specific ============ */
+  .press-contact{background:#fff;border-radius:12px;padding:30px 32px;box-shadow:var(--shadow-lg);border-top:5px solid var(--red);display:grid;grid-template-columns:1fr 1fr;gap:30px}
+  @media(max-width:720px){.press-contact{grid-template-columns:1fr}}
+  .contact-block h3{font-family:Georgia,serif;font-size:20px;margin:0 0 8px;color:var(--brown)}
+  .contact-block .role{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:14px;font-weight:600}
+  .contact-line{font-size:15px;margin:6px 0;color:var(--ink-2);display:flex;gap:10px;align-items:center}
+  .contact-line .label{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);min-width:62px;font-weight:600}
+  .contact-line a{font-weight:600}
+  .resource-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:18px 0}
+  @media(max-width:720px){.resource-grid{grid-template-columns:1fr}}
+  .resource{background:#fff;border-radius:10px;padding:22px 24px;box-shadow:var(--shadow);border-left:4px solid var(--orange);transition:box-shadow .15s}
+  .resource:hover{box-shadow:var(--shadow-lg)}
+  .resource .kind{font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:var(--orange);font-weight:700;margin-bottom:8px}
+  .resource h3{font-family:Georgia,serif;font-size:18px;color:var(--brown);margin:0 0 8px}
+  .resource p{font-size:13.5px;margin:0 0 14px}
+  .resource a.download{font-size:13.5px;font-weight:600;color:var(--red);cursor:pointer}
+  .resource .file-meta{font-size:11px;color:var(--muted);margin-top:6px}
+  .quick-facts{background:var(--brown);color:var(--cream);border-radius:12px;padding:32px 36px;margin:30px 0}
+  .quick-facts h2{color:#fff;border-color:rgba(244,232,214,.2)}
+  .quick-facts dl{display:grid;grid-template-columns:140px 1fr;gap:10px 24px;font-size:14.5px;margin:18px 0 0}
+  .quick-facts dt{color:rgba(244,232,214,.6);font-size:12px;text-transform:uppercase;letter-spacing:.08em;font-weight:600;padding-top:3px}
+  .quick-facts dd{margin:0;color:var(--cream)}
+  @media(max-width:560px){.quick-facts dl{grid-template-columns:1fr;gap:0}.quick-facts dd{margin-bottom:14px}}
+  .release-list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+  .release-list li{background:#fff;padding:16px 20px;border-radius:8px;border-left:3px solid var(--orange);box-shadow:var(--shadow);display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+  .release-list .meta{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin-bottom:4px}
+  .release-list .name{font-size:15px;color:var(--brown);font-weight:600}
+  .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}
+  @media(max-width:560px){.photo-grid{grid-template-columns:1fr 1fr}}
+  .photo{background:linear-gradient(135deg,var(--tan-soft),var(--tan));aspect-ratio:1/1;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px;text-align:center;padding:18px;font-style:italic;box-shadow:var(--shadow)}
+  /* ============ Take-action-specific ============ */
+  .hero-action{background:linear-gradient(135deg,#2d1a0f 0%,#4a2917 100%);color:var(--cream);padding:64px 28px 50px;text-align:center}
+  .hero-action h1{font-family:Georgia,serif;font-size:clamp(34px,5.5vw,52px);color:#fff;margin:0 0 14px;line-height:1.1;letter-spacing:-.015em}
+  .hero-action .lede{font-size:18px;color:rgba(244,232,214,.9);max-width:560px;margin:0 auto 28px}
+  .signature-count{display:inline-block;background:rgba(244,232,214,.1);border:1px solid rgba(244,232,214,.2);border-radius:20px;padding:6px 14px;font-size:13px;color:rgba(244,232,214,.85);margin-top:16px}
+  .signature-count strong{color:#fff;font-weight:700}
+  .action-step{background:#fff;border-radius:12px;padding:30px 36px;margin:28px 0;box-shadow:var(--shadow);display:grid;grid-template-columns:64px 1fr;gap:26px;align-items:start;border-left:5px solid var(--red)}
+  .action-step.step-2{border-left-color:var(--green)}
+  .action-step.step-3{border-left-color:var(--orange)}
+  .action-step.step-4{border-left-color:var(--purple)}
+  .action-step.step-5{border-left-color:var(--blue)}
+  .step-num{font-family:Georgia,serif;font-size:42px;font-weight:700;color:var(--red);line-height:1;text-align:center}
+  .step-2 .step-num{color:var(--green)}
+  .step-3 .step-num{color:var(--orange)}
+  .step-4 .step-num{color:var(--purple)}
+  .step-5 .step-num{color:var(--blue)}
+  .step-body h2{font-family:Georgia,serif;font-size:24px;color:var(--brown);margin:6px 0 8px;border:none;padding:0}
+  .step-body .effort{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:600;margin-bottom:10px}
+  .step-body p{color:var(--ink-2);margin:0 0 14px;font-size:15px}
+  .step-body .why{font-style:italic;color:var(--muted);font-size:13.5px;margin-top:10px}
+  .step-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+  @media(max-width:640px){.action-step{grid-template-columns:1fr;padding:24px 26px}.step-num{text-align:left;font-size:32px}}
+  .share-btn{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--tan);color:var(--ink);padding:10px 16px;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none}
+  .share-btn:hover{border-color:var(--red);color:var(--red);text-decoration:none}
+  .rep-form{background:var(--tan-soft);border-radius:8px;padding:18px 22px;margin-top:14px;font-size:13.5px}
+  .rep-form label{display:block;font-weight:600;color:var(--brown);font-size:12px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+  .rep-form input{width:100%;padding:10px 12px;border:1px solid var(--tan);border-radius:6px;font-size:14px;font-family:inherit;margin-bottom:10px;background:#fff}
+  .rep-form input:focus{outline:0;border-color:var(--red)}
+  .rep-form .help{font-size:12px;color:var(--muted);margin:0 0 10px}
+  .ru-callout{background:var(--brown);color:var(--cream);border-radius:12px;padding:32px 36px;margin:40px 0;text-align:center}
+  .ru-callout h2{font-family:Georgia,serif;color:#fff;margin:0 0 12px;font-size:24px;border:none;padding:0}
+  .ru-callout p{color:rgba(244,232,214,.85);margin:0 0 22px;max-width:560px;margin-left:auto;margin-right:auto}
+  .subscribe{background:#fff;border-radius:12px;padding:28px 32px;border:2px solid var(--tan);margin:30px 0}
+  .subscribe h2{font-family:Georgia,serif;color:var(--brown);font-size:22px;margin:0 0 8px;border:none;padding:0}
+  .subscribe p{color:var(--ink-2);font-size:14px;margin:0 0 16px}
+  .subscribe-form{display:flex;gap:8px;flex-wrap:wrap}
+  .subscribe-form input{flex:1;min-width:220px;padding:12px 14px;border:1px solid var(--tan);border-radius:6px;font-size:14px;font-family:inherit}
+  /* ============ FYOC-specific (matches live design at bringleonhome.org/fyoc) ============ */
+  .fyoc-wrap{max-width:880px;margin:0 auto;padding:0 24px;color:#1a1a1a;line-height:1.6}
+  .fyoc-wrap .fyoc-eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#6b6b6b;font-weight:700;margin:40px 0 14px;text-align:center}
+  .fyoc-wrap h1.fyoc-hero{font-family:Georgia,"Times New Roman",serif;font-size:clamp(28px,4.5vw,44px);line-height:1.1;margin:0 0 20px;text-align:center;font-weight:700;color:#1a1a1a;letter-spacing:-.01em}
+  .fyoc-wrap .fyoc-hero-sub{font-size:17px;line-height:1.65;color:#3a3a3a;text-align:center;max-width:680px;margin:0 auto 32px}
+  .fyoc-wrap .fyoc-hero-sub strong{color:#1a1a1a}
+  .fyoc-hero-panel{background:linear-gradient(135deg,#fff8ec 0%,#fbf1e8 100%);border:2px solid var(--orange);border-radius:14px;padding:28px 32px;margin:30px auto 50px;max-width:540px;text-align:center;box-shadow:0 6px 24px rgba(184,84,26,.08)}
+  .fyoc-hero-panel .start-here{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#a04918;font-weight:700;margin-bottom:16px}
+  .fyoc-hero-panel .btn-big{display:inline-block;background:var(--orange);color:#fff;padding:18px 36px;border-radius:8px;text-decoration:none;font-weight:700;font-size:17px;letter-spacing:.02em;box-shadow:0 4px 14px rgba(184,84,26,.3);transition:transform .15s,box-shadow .15s}
+  .fyoc-hero-panel .btn-big:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(184,84,26,.4);text-decoration:none}
+  .fyoc-hero-panel .trust-row{display:flex;gap:18px;justify-content:center;margin-top:16px;font-size:13px;color:#6b6b6b;flex-wrap:wrap}
+  .fyoc-hero-panel .signup-link{display:block;margin-top:14px;font-size:13px;color:#6b6b6b;text-decoration:none;border-bottom:1px dotted var(--orange);padding-bottom:1px}
+  .fyoc-hero-panel .signup-link:hover{color:var(--orange)}
+  .fyoc-hero-panel .how-link{display:inline-block;margin-top:8px;font-size:12px;color:#9a9a9a;text-decoration:none}
+  .fyoc-hero-panel .how-link:hover{color:var(--orange)}
+  .fyoc-toc-box{background:#faf8f5;border:1px solid #e4e1dc;border-radius:8px;padding:18px 24px;margin:30px auto 50px;max-width:560px}
+  .fyoc-toc-box h3{margin:0 0 10px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);font-weight:700}
+  .fyoc-toc-box ol{margin:0;padding-left:22px;font-size:14px;line-height:1.9}
+  .fyoc-toc-box a{color:#1a1a1a;text-decoration:none;border-bottom:1px dotted var(--orange)}
+  .fyoc-toc-box a:hover{color:var(--orange);text-decoration:none}
+  .fyoc-wrap h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(22px,3.4vw,28px);line-height:1.2;margin:60px 0 16px;font-weight:700;color:#1a1a1a;scroll-margin-top:80px;border:none;padding:0;display:block}
+  .fyoc-wrap h3{font-size:17px;margin:24px 0 8px;font-weight:700;color:#1a1a1a;font-family:-apple-system,sans-serif}
+  .fyoc-wrap p{font-size:16px;line-height:1.7;margin:0 0 16px;color:#1a1a1a}
+  .fyoc-wrap p strong{color:#1a1a1a}
+  .fyoc-stages{display:grid;grid-template-columns:1fr;gap:14px;margin:20px 0 40px}
+  .fyoc-stage{background:#faf8f5;border-left:4px solid var(--orange);padding:20px 24px;border-radius:0 8px 8px 0}
+  .fyoc-stage .stage-label{font-size:11px;color:var(--orange);letter-spacing:.1em;text-transform:uppercase;font-weight:700;margin-bottom:6px}
+  .fyoc-stage h3{margin:0 0 8px;font-size:17px}
+  .fyoc-stage p{margin:0;font-size:15px;line-height:1.6;color:#3a3a3a}
+  .fyoc-pricing{background:#1a1a1a;color:#f4ede0;padding:40px 36px;border-radius:14px;text-align:center;margin:40px 0}
+  .fyoc-pricing .price-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.75;font-weight:700}
+  .fyoc-pricing .price-big{font-family:Georgia,serif;font-size:clamp(40px,6vw,56px);font-weight:700;line-height:1;margin:16px 0 8px}
+  .fyoc-pricing .price-sub{font-size:15px;opacity:.85;margin:0 0 30px}
+  .fyoc-pricing .includes{text-align:left;max-width:460px;margin:0 auto;font-size:14px;line-height:1.8}
+  .fyoc-pricing .includes p{font-size:14px;color:#f4ede0;margin:0 0 4px}
+  .fyoc-pricing .includes .yes{color:#6dd198;font-weight:700;margin-right:6px}
+  .fyoc-pricing .includes .no{color:#f4a08f;font-weight:700;margin-right:6px}
+  .fyoc-pricing .price-footnote{font-size:12px;opacity:.7;margin-top:24px;font-style:italic}
+  .fyoc-mid-cta{background:#1a1a1a;color:#f4ede0;border-radius:14px;padding:32px 28px;text-align:center;margin:50px 0 40px}
+  .fyoc-mid-cta .label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#f4a86d;font-weight:700;margin-bottom:12px}
+  .fyoc-mid-cta h3{color:#f7e9d8;font-family:Georgia,serif;font-size:24px;margin:0 0 8px;font-weight:700}
+  .fyoc-mid-cta p{color:#e8d4c0;font-size:15px;margin:0 0 22px}
+  .fyoc-mid-cta .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .fyoc-mid-cta .btn-primary{display:inline-block;background:var(--orange);color:#fff;padding:16px 28px;border-radius:8px;text-decoration:none;font-weight:700;font-size:15px}
+  .fyoc-mid-cta .btn-primary:hover{background:#cc6022;text-decoration:none}
+  .fyoc-mid-cta .btn-secondary{display:inline-block;background:transparent;color:#f7e9d8;border:1px solid #f4a86d;padding:16px 28px;border-radius:8px;text-decoration:none;font-weight:600;font-size:15px}
+  .fyoc-mid-cta .btn-secondary:hover{background:rgba(244,168,109,.1);color:#fff;text-decoration:none}
+  .fyoc-faq details{background:transparent;border:0;border-bottom:1px solid #e4e1dc;border-radius:0;padding:18px 0;margin:0;box-shadow:none}
+  .fyoc-faq details[open]{box-shadow:none}
+  .fyoc-faq summary{cursor:pointer;font-weight:700;font-size:17px;padding-right:36px;position:relative;list-style:none;line-height:1.4;color:#1a1a1a;display:block}
+  .fyoc-faq summary::-webkit-details-marker{display:none}
+  .fyoc-faq summary::after{content:"+";position:absolute;right:0;top:-4px;font-size:28px;font-weight:300;color:var(--orange);transition:transform .2s;line-height:1}
+  .fyoc-faq details[open] summary::after{content:"\002212"}
+  .fyoc-faq details[open] summary{margin-bottom:10px}
+  .fyoc-faq p{font-size:15px;line-height:1.7;margin:12px 0 0;color:#3a3a3a}
+  .fyoc-inquire{background:#1a1a1a;color:#f4ede0;border-radius:14px;padding:36px 32px;margin:28px 0;text-align:center}
+  .fyoc-inquire .label-top{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#f4a86d;font-weight:700;margin-bottom:14px}
+  .fyoc-inquire p{color:#e8d4c0;font-size:16px;margin:0 0 22px}
+  .fyoc-inquire .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .fyoc-inquire .btn-book{display:inline-block;background:var(--orange);color:#fff;padding:18px 32px;border-radius:8px;text-decoration:none;font-weight:700;font-size:17px;box-shadow:0 4px 14px rgba(184,84,26,.35)}
+  .fyoc-inquire .btn-book:hover{text-decoration:none}
+  .fyoc-inquire .btn-signup{display:inline-block;background:transparent;color:#f7e9d8;border:1px solid #f4a86d;padding:18px 32px;border-radius:8px;text-decoration:none;font-weight:600;font-size:17px}
+  .fyoc-inquire .btn-signup:hover{text-decoration:none}
+  .fyoc-inquire .inquire-footnote{font-size:12px;color:#f4a86d;margin:18px 0 0;font-style:italic}
+  .fyoc-gototop{display:inline-block;background:#f1eee9;color:#1a1a1a;padding:7px 16px;border-radius:4px;font-size:13px;text-decoration:none;margin:20px 0 0;font-weight:600}
+  .fyoc-gototop:hover{background:#e4e1dc;text-decoration:none}
+  .fyoc-gototop::before{content:"\002191  ";color:var(--orange)}
+  .fyoc-disclaimer{font-size:13px;color:#6b6b6b;line-height:1.7;padding:30px 0 50px;border-top:1px solid #e4e1dc;margin-top:60px}
+  .fyoc-disclaimer p{font-size:13px;color:#6b6b6b}
+  .fyoc-contact-row{font-size:14px;margin-top:28px;color:#1a1a1a}
+  .fyoc-contact-row a{color:var(--orange)}
+  /* Sticky floating "Book a call" pill &#8212; only visible on FYOC page */
+  .fyoc-float-cta{display:none;position:fixed;bottom:24px;right:80px;background:var(--orange);color:#fff;padding:12px 20px;border-radius:28px;text-decoration:none;font-weight:700;font-size:14px;letter-spacing:.02em;box-shadow:0 6px 18px rgba(184,84,26,.4);z-index:99;transition:transform .15s,box-shadow .15s;align-items:center;gap:6px}
+  body.page-fyoc .fyoc-float-cta{display:inline-flex}
+  .fyoc-float-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(184,84,26,.55);text-decoration:none}
+  @media(max-width:720px){.fyoc-float-cta{display:none !important}.fyoc-hero-panel{padding:22px 20px}.fyoc-hero-panel .btn-big{padding:16px 26px;font-size:15px}.fyoc-mid-cta{padding:24px 20px}.fyoc-mid-cta h3{font-size:20px}.fyoc-mid-cta .btn-row,.fyoc-inquire .btn-row{flex-direction:column}.fyoc-pricing{padding:30px 22px}}
+  /* ============ FOOTER ============ */
+  footer{background:#1a0f08;color:rgba(244,232,214,.7);padding:50px 28px 30px;font-size:13px;margin-top:60px}
+  .footer-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
+  .footer-brand{font-family:Georgia,serif;color:var(--cream);font-size:18px;margin-bottom:12px}
+  .footer-trust{font-size:12px;color:rgba(244,232,214,.55);line-height:1.6}
+  .footer-col h4{color:var(--cream);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin:0 0 12px}
+  .footer-col ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+  .footer-col a{color:rgba(244,232,214,.7);font-size:13px;cursor:pointer}.footer-col a:hover{color:var(--cream);text-decoration:none}
+  .footer-bottom{max-width:1180px;margin:32px auto 0;padding-top:22px;border-top:1px solid rgba(244,232,214,.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:12px;color:rgba(244,232,214,.5)}
+  @media(max-width:720px){.footer-inner{grid-template-columns:1fr;gap:22px}}
+  /* ============ Sticky mobile CTA (home only) ============ */
+  .sticky-cta{display:none;position:fixed;bottom:0;left:0;right:0;background:#fff;box-shadow:0 -4px 16px rgba(45,26,15,.12);padding:12px 18px;z-index:90;border-top:1px solid var(--tan)}
+  .sticky-cta .btn{width:100%;text-align:center}
+  @media(max-width:720px){body.page-home .sticky-cta{display:block}body.page-home{padding-bottom:72px}}
+  /* ============ Go to Top (per-section, hard-coded) ============ */
+  .case-gototop{text-align:right;margin:22px 0 0}
+  .case-gototop a{display:inline-block;font-size:13px;font-weight:600;color:var(--red);text-decoration:none;border:1px solid var(--tan);border-radius:6px;padding:12px 18px;background:#fff;min-height:44px;line-height:1.4}
+  .case-gototop a:hover{border-color:var(--red);text-decoration:none}
+  .case-gototop a:active{background:var(--tan-soft)}
+  .case-gototop.on-dark a{background:transparent;color:var(--cream);border-color:rgba(244,232,214,.5)}
+  .case-gototop.on-dark a:hover{background:var(--cream);color:var(--brown)}
+  @media(max-width:640px){.case-gototop{text-align:center}.case-gototop a{width:100%;text-align:center}}
+  /* ============ Bilingual toggle (added by rebuild) ============ */
+  .blh-page-wrap{}
+  .blh-page-wrap.blh-lang-en [lang-show="ru"]{display:none !important}
+  .blh-page-wrap.blh-lang-ru [lang-show="en"]{display:none !important}
+  .blh-page-wrap.blh-lang-en #blh-btn-en{background:#2d1a0f;color:#faf7f2}
+  .blh-page-wrap.blh-lang-en #blh-btn-ru{background:transparent;color:#6b6b6b}
+  .blh-page-wrap.blh-lang-ru #blh-btn-ru{background:#2d1a0f;color:#faf7f2}
+  .blh-page-wrap.blh-lang-ru #blh-btn-en{background:transparent;color:#6b6b6b}
+</style>
+<style>
+  .page { display: block !important; }
+</style><div class="blh-lang-bar" style="position:fixed;bottom:20px;right:20px;z-index:9999;display:flex;background:#fff;border:1.5px solid #d4b896;border-radius:6px;overflow:hidden;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.1);"><button id="blh-btn-en" onclick="setBLHLang('en')" style="border:0;background:#2d1a0f;color:#faf7f2;padding:8px 14px;cursor:pointer;font-family:inherit;letter-spacing:.04em;">EN</button><button id="blh-btn-ru" onclick="setBLHLang('ru')" style="border:0;background:transparent;color:#6b6b6b;padding:8px 14px;cursor:pointer;font-family:inherit;letter-spacing:.04em;">Russia</button></div><div class="blh-page-wrap blh-lang-en"><section class="page" id="page-case" style="display:block;">
+<header class="page-header" id="case-top">
+<div class="breadcrumb" lang-show="en"><a href="../">Home</a> · The Case</div>
+<div class="breadcrumb" lang-show="ru"><a href="../">Главная</a> · Дело</div>
+<h1 lang-show="en">The case of Leon Levenstein</h1>
+<h1 lang-show="ru">Дело Леона Левенштейна</h1>
+<p class="page-lede" lang-show="en">An American boy. Three years old when separated from his father in December 2023, held in Russia by his late mother's brother ever since. His father has worked tirelessly through every legal, diplomatic, and political channel to bring him home. This page collects the facts.</p>
+<p class="page-lede" lang-show="ru">Американский мальчик шести лет. Удерживается в России с декабря 2023 года дядей по линии умершей матери. Два с половиной года юридической, дипломатической и политической работы. На этой странице собраны факты.</p>
+</header>
+<div class="toc">
+<div class="toc-inner">
+<div class="toc-label" lang-show="en">📑 On this page</div>
+<div class="toc-label" lang-show="ru">📑 На этой странице</div>
+<ol>
+<li><a href="#case-summary" lang-show="en">Summary</a><a href="#case-summary" lang-show="ru">Резюме</a></li>
+<li><a href="#case-appeal" lang-show="en">Father's appeal</a><a href="#case-appeal" lang-show="ru">Обращение отца</a></li>
+<li><a href="#case-posture" lang-show="en">Current legal posture</a><a href="#case-posture" lang-show="ru">Текущее положение в суде</a></li>
+<li><a href="#case-timeline" lang-show="en">Full timeline</a><a href="#case-timeline" lang-show="ru">Полная хронология</a></li>
+<li><a href="#case-evidence" lang-show="en">Supporting evidence</a><a href="#case-evidence" lang-show="ru">Доказательства</a></li>
+<li><a href="#case-letters" lang-show="en">Public letters</a><a href="#case-letters" lang-show="ru">Открытые письма</a></li>
+<li><a href="#case-share" lang-show="en">Share this page</a><a href="#case-share" lang-show="ru">Поделиться</a></li>
+</ol>
+</div>
+</div>
+<div class="content-narrow">
+<section class="section" id="case-summary">
+<h2><span lang-show="en">1 · Summary</span><span lang-show="ru">1 · Резюме</span></h2>
+<p lang-show="en">Leon Levenstein was born on 27 February 2020 in the United States. He is a U.S. citizen and previously held Maltese residency. His mother, Anna Yurievna Lyudinovskova, died of heart disease and cancer in Russia on 5 December 2023 during a 12-day visit. One day later — 6 December 2023 — Anna's brother, Andrei Yurievich Malevanny (Leon's maternal uncle), obtained preliminary guardianship of Leon without notifying Nicholas Levenstein, the boy's father.</p>
+<p lang-show="en">Nicholas did not learn of Anna's death until 21 December 2023, through mutual acquaintances. He missed the funeral. He spent six weeks obtaining a Russian visa and locating his son. He has not seen Leon since.</p>
+<p lang-show="en">Over two and a half years, the case has moved through Russian courts (Hague Convention application, guardianship-annulment, visitation, criminal complaint), the U.S. State Department, the White House Communications Director, U.S. Senators and Representatives, General Keith Kellogg, Anthony Scaramucci, and Russia's Commissioner on Children's Rights. None of these channels has produced Leon's return or even contact with him.</p>
+<p lang-show="ru">Леон Левенштейн родился 27 февраля 2020 года в США. Он гражданин США, ранее имел вид на жительство Мальты. Его мать Анна Юрьевна Людиновская скончалась от болезни сердца и онкологии в России 5 декабря 2023 года во время 12-дневной поездки. Через день — 6 декабря 2023 года — её брат Андрей Юрьевич Малеванный (дядя Леона по материнской линии) получил предварительную опеку над Леоном без уведомления Николая Левенштейна, отца мальчика.</p>
+<p lang-show="ru">Николай узнал о смерти Анны только 21 декабря 2023 года от общих знакомых. На похороны он не успел. Шесть недель ушло на получение российской визы и поиск сына. С тех пор он не видел Леона.</p>
+<p lang-show="ru">За два с половиной года дело прошло через российские суды (Гаагская конвенция, аннулирование опеки, общение, уголовная жалоба), Государственный департамент США, Белый дом, сенаторов и конгрессменов США, генерала Кита Келлогга, Энтони Скарамуччи и Уполномоченного при Президенте РФ по правам ребёнка. Ни один из этих каналов не привёл к возвращению Леона — даже к контакту с ним.</p>
+<div class="case-gototop"><a href="#case-top" lang-show="en">↑ Go to Top</a><a href="#case-top" lang-show="ru">↑ Наверх</a></div>
+</section>
+<section class="section" id="case-appeal">
+<h2><span lang-show="en">2 · Father's appeal</span><span lang-show="ru">2 · Обращение отца</span></h2>
+<p class="serif" lang-show="en" style="font-size:18px;font-style:italic;color:var(--brown);border-left:4px solid var(--red);padding:6px 0 6px 20px">"An American boy was kidnapped in Russia almost three years ago. His father has worked tirelessly to bring him home. Please help."</p>
+<p class="serif" lang-show="ru" style="font-size:18px;font-style:italic;color:var(--brown);border-left:4px solid var(--red);padding:6px 0 6px 20px">«Американский мальчик был похищен в России почти три года назад. Его отец неустанно работает над тем, чтобы вернуть его домой. Пожалуйста, помогите.»</p>
+<p lang-show="en">— Nicholas Levenstein</p>
+<p lang-show="ru">— Николай Левенштейн</p>
+<div class="case-gototop"><a href="#case-top" lang-show="en">↑ Go to Top</a><a href="#case-top" lang-show="ru">↑ Наверх</a></div>
+</section>
+<section class="section" id="case-posture">
+<h2><span lang-show="en">3 · Current legal posture</span><span lang-show="ru">3 · Текущее положение в суде</span></h2>
+<p lang-show="en">As of June 2026, six legal tracks are or have been active in the Russian courts. Two remain alive. Four are exhausted at the level reached.</p>
+<p lang-show="ru">По состоянию на июнь 2026 года в российских судах ведутся или велись шесть процессов. Два по-прежнему активны. Четыре исчерпаны на достигнутом уровне.</p>
+<div class="posture-grid">
+<div class="posture-card exhausted"><div class="meta" lang-show="en">Hague Convention · Tverskoy District</div><div class="meta" lang-show="ru">Гаагская конвенция · Тверской суд</div><h3 lang-show="en">Case No. 02–3254/2024</h3><h3 lang-show="ru">Дело № 02–3254/2024</h3><p lang-show="en">Denied 8 July 2024. Moscow City Court upheld 30 October 2024.</p><p lang-show="ru">Отказ 8 июля 2024. Мосгорсуд оставил без изменения 30 октября 2024.</p><span class="status exhausted" lang-show="en">Exhausted</span><span class="status exhausted" lang-show="ru">Исчерпано</span></div>
+<div class="posture-card exhausted"><div class="meta" lang-show="en">Guardianship annulment · Basmanny District</div><div class="meta" lang-show="ru">Отмена опеки · Басманный суд</div><h3 lang-show="en">Case No. 02-0698/2025</h3><h3 lang-show="ru">Дело № 02-0698/2025</h3><p lang-show="en">Denied 10 March 2025. Appeal denied 14 August 2025 — 15–20 second deliberation.</p><p lang-show="ru">Отказ 10 марта 2025. Апелляция отклонена 14 августа 2025 — совещание 15–20 секунд.</p><span class="status exhausted" lang-show="en">Exhausted</span><span class="status exhausted" lang-show="ru">Исчерпано</span></div>
+<div class="posture-card pending"><div class="meta" lang-show="en">Visitation · Golovinsky District</div><div class="meta" lang-show="ru">Общение · Головинский суд</div><h3 lang-show="en">Case No. M-0462/2025</h3><h3 lang-show="ru">Дело № M-0462/2025</h3><p lang-show="en">Denied 12 December 2025. Motivated decision pending. Motion to compel filed Jan 2026. The interim order for a daily 17:00–18:00 call (No. 2-3865/2025) <a href="../penalties/#order-section">is being violated →</a></p><p lang-show="ru">Отказ 12 декабря 2025. Мотивированное решение не выдано. Ходатайство о понуждении подано в январе 2026. Определение о ежедневном звонке 17:00–18:00 (№ 2-3865/2025) <a href="../penalties/#order-section">нарушается →</a></p><span class="status pending" lang-show="en">Pending appeal</span><span class="status pending" lang-show="ru">В работе</span></div>
+<div class="posture-card active"><div class="meta" lang-show="en">Constitutional Court complaint</div><div class="meta" lang-show="ru">Жалоба в Конституционный суд</div><h3 lang-show="en">Petition No. 9488/15-01/2026</h3><h3 lang-show="ru">Жалоба № 9488/15-01/2026</h3><p lang-show="en">Accepted for review 15 January 2026. Challenges Art. 121(1) of the Family Code. Most viable active track.</p><p lang-show="ru">Принята к рассмотрению 15 января 2026. Оспаривает ст. 121(1) Семейного кодекса. Наиболее перспективный канал.</p><span class="status active" lang-show="en">Active</span><span class="status active" lang-show="ru">Активно</span></div>
+<div class="posture-card pending"><div class="meta" lang-show="en">Supreme Court cassation</div><div class="meta" lang-show="ru">Кассация в Верховный суд</div><h3 lang-show="en">Cassation filing</h3><h3 lang-show="ru">Кассационная жалоба</h3><p lang-show="en">Filed 22 September 2025. Pending review.</p><p lang-show="ru">Подана 22 сентября 2025. В рассмотрении.</p><span class="status pending" lang-show="en">Pending</span><span class="status pending" lang-show="ru">В работе</span></div>
+<div class="posture-card active"><div class="meta" lang-show="en">Criminal · Art. 125 CPC complaint</div><div class="meta" lang-show="ru">Уголовный канал · ст. 125 УПК</div><h3 lang-show="en">Abuse-of-power complaint</h3><h3 lang-show="ru">Жалоба о превышении полномочий</h3><p lang-show="en">Article 125 appeal heard 1 October 2025. Investigative Committee complaint proceeding.</p><p lang-show="ru">Слушание по ст. 125 УПК 1 октября 2025. Жалоба в Следственный комитет.</p><span class="status active" lang-show="en">Active</span><span class="status active" lang-show="ru">Активно</span></div>
+</div>
+<p lang-show="en" style="font-size:13px;color:var(--muted);font-style:italic;margin-top:20px">Russian counsel: Tatiana Grominko · Roman Meyer. Full filings held by counsel.</p>
+<p lang-show="ru" style="font-size:13px;color:var(--muted);font-style:italic;margin-top:20px">Российские адвокаты: Татьяна Громыко · Роман Мейер. Полные документы хранятся у адвокатов.</p>
+<div class="case-gototop"><a href="#case-top" lang-show="en">↑ Go to Top</a><a href="#case-top" lang-show="ru">↑ Наверх</a></div>
+</section>
+<section class="section" id="case-timeline">
+<h2><span lang-show="en">4 · Full timeline</span><span lang-show="ru">4 · Полная хронология</span></h2>
+<details>
+<summary><span lang-show="en">2023 — separation</span><span lang-show="ru">2023 — разлука</span></summary>
+<div class="timeline">
+<div class="tl-item major"><div class="tl-date">5 Dec 2023</div><div class="tl-title" lang-show="en">Anna dies in Moscow</div><div class="tl-title" lang-show="ru">Анна умирает в Москве</div><p class="tl-body" lang-show="en">Heart disease and central breast cancer. 12-day visit.</p><p class="tl-body" lang-show="ru">Болезнь сердца и центральный рак молочной железы.</p></div>
+<div class="tl-item major"><div class="tl-date">6 Dec 2023</div><div class="tl-title" lang-show="en">Andrei Malevanny obtains preliminary guardianship</div><div class="tl-title" lang-show="ru">Андрей Малеванный получает предварительную опеку</div><p class="tl-body" lang-show="en">One day after Anna's death. No notification to Leon's father.</p><p class="tl-body" lang-show="ru">На следующий день после смерти Анны. Отец не уведомлён.</p></div>
+<div class="tl-item major"><div class="tl-date">21 Dec 2023</div><div class="tl-title" lang-show="en">Nicholas learns of Anna's death</div><div class="tl-title" lang-show="ru">Николай узнаёт о смерти Анны</div><p class="tl-body" lang-show="en">Through mutual acquaintances. Funeral already passed.</p><p class="tl-body" lang-show="ru">От общих знакомых. Похороны уже прошли.</p></div>
+</div>
+</details>
+<details>
+<summary><span lang-show="en">2024 — Hague Convention case</span><span lang-show="ru">2024 — Гаагская конвенция</span></summary>
+<div class="timeline">
+<div class="tl-item"><div class="tl-date">Early 2024</div><div class="tl-title" lang-show="en">Visa obtained, child located</div><div class="tl-title" lang-show="ru">Виза получена, ребёнок найден</div><p class="tl-body" lang-show="en">Six weeks of administrative work.</p></div>
+<div class="tl-item major"><div class="tl-date">8 Jul 2024</div><div class="tl-title" lang-show="en">Hague Convention case denied</div><div class="tl-title" lang-show="ru">Гаагский иск отклонён</div><p class="tl-body" lang-show="en">Tverskoy District Court, Case No. 02–3254/2024.</p></div>
+<div class="tl-item"><div class="tl-date">30 Oct 2024</div><div class="tl-title" lang-show="en">Appeal upheld by Moscow City Court</div><div class="tl-title" lang-show="ru">Апелляция отклонена Мосгорсудом</div></div>
+</div>
+</details>
+<details>
+<summary><span lang-show="en">2025 — guardianship + visitation + criminal</span><span lang-show="ru">2025 — опека, общение, уголовное</span></summary>
+<div class="timeline">
+<div class="tl-item major"><div class="tl-date">10 Mar 2025</div><div class="tl-title" lang-show="en">Guardianship annulment denied</div><div class="tl-title" lang-show="ru">В отмене опеки отказано</div><p class="tl-body" lang-show="en">Basmanny District Court, Case No. 02-0698/2025.</p></div>
+<div class="tl-item major"><div class="tl-date">14 Aug 2025</div><div class="tl-title" lang-show="en">Guardianship appeal denied — 15–20 second deliberation</div><div class="tl-title" lang-show="ru">Апелляция отклонена — совещание 15–20 секунд</div><p class="tl-body" lang-show="en">Moscow City Court. Deliberation length suggests predetermined verdict.</p></div>
+<div class="tl-item"><div class="tl-date">22 Sep 2025</div><div class="tl-title" lang-show="en">Supreme Court cassation filed</div><div class="tl-title" lang-show="ru">Подана кассация в Верховный суд</div></div>
+<div class="tl-item"><div class="tl-date">1 Oct 2025</div><div class="tl-title" lang-show="en">Article 125 CPC criminal complaint heard</div><div class="tl-title" lang-show="ru">Слушание по ст. 125 УПК</div></div>
+<div class="tl-item major"><div class="tl-date">25 Nov 2025</div><div class="tl-title" lang-show="en">Court orders daily father–son call, 17:00–18:00</div><div class="tl-title" lang-show="ru">Суд назначает ежедневный звонок отца и сына, 17:00–18:00</div><p class="tl-body" lang-show="en">Golovinsky District Court interim measure, Case No. 2-3865/2025. The guardian obstructs it. <a href="../penalties/#order-section">Read the order →</a></p><p class="tl-body" lang-show="ru">Обеспечительная мера Головинского суда, дело № 2-3865/2025. Опекун препятствует исполнению. <a href="../penalties/#order-section">Читать определение →</a></p></div>
+<div class="tl-item major"><div class="tl-date">12 Dec 2025</div><div class="tl-title" lang-show="en">Visitation case denied</div><div class="tl-title" lang-show="ru">В общении отказано</div></div>
+</div>
+</details>
+<details open="">
+<summary><span lang-show="en">2026 — Constitutional Court track</span><span lang-show="ru">2026 — Конституционный суд</span></summary>
+<div class="timeline">
+<div class="tl-item"><div class="tl-date">13–15 Jan 2026</div><div class="tl-title" lang-show="en">Motion to compel motivated decision filed</div><div class="tl-title" lang-show="ru">Подано ходатайство о понуждении</div></div>
+<div class="tl-item major"><div class="tl-date">15 Jan 2026</div><div class="tl-title" lang-show="en">Constitutional Court accepts complaint for review</div><div class="tl-title" lang-show="ru">КС принимает жалобу к рассмотрению</div><p class="tl-body" lang-show="en">Petition No. 9488/15-01/2026. Most viable active legal track.</p></div>
+</div>
+</details>
+<div class="case-gototop"><a href="#case-top" lang-show="en">↑ Go to Top</a><a href="#case-top" lang-show="ru">↑ Наверх</a></div>
+</section>
+<section class="section" id="case-evidence">
+<h2><span lang-show="en">5 · Supporting evidence</span><span lang-show="ru">5 · Доказательства</span></h2>
+<div class="warning" lang-show="en">⚠ Some materials below contain antisemitic content and accounts of aggression toward a child. All materials are public court records.</div>
+<div class="warning" lang-show="ru">⚠ Некоторые материалы ниже содержат антисемитский контент и описания агрессии в отношении ребёнка. Все материалы — публичные судебные материалы.</div>
+<div class="evidence-card"><h3 lang-show="en">Antisemitic communications from the current guardian</h3><h3 lang-show="ru">Антисемитские сообщения от опекуна</h3><p lang-show="en">Screenshots of Andrei Malevanny's texts and death threats, with full English translation. Public court materials.</p><p lang-show="ru">Скриншоты сообщений и угроз Андрея Малеванного с переводом на английский. Материалы дела.</p><a class="download" href="../antisemiticmessage/" lang-show="en" style="color:#a52a17;font-weight:600;">View the messages →</a><a class="download" href="../antisemiticmessage/" lang-show="ru" style="color:#a52a17;font-weight:600;">Смотреть сообщения →</a></div>
+<div class="evidence-card"><h3 lang-show="en">Andrei Malevanny — hostage video &amp; audio death threats</h3><h3 lang-show="ru">Андрей Малеванный — видео с ребёнком и аудиоугрозы</h3><p lang-show="en">The guardian on camera telling Leon he will not see his father again as a child; audio death threats; a father's undelivered birthday message. Witness statements on his conduct filed with the Basmanny Court.</p><p lang-show="ru">Опекун на видео говорит Леону, что тот больше не увидит отца ребёнком; аудиоугрозы; недоставленное поздравление отца. Показания свидетелей в Басманном суде.</p><a class="download" href="../andreiremarks/" lang-show="en" style="color:#a52a17;font-weight:600;">View the videos →</a><a class="download" href="../andreiremarks/" lang-show="ru" style="color:#a52a17;font-weight:600;">Смотреть видео →</a></div>
+<div class="evidence-card"><h3 lang-show="en">Violation of the court-ordered daily call</h3><h3 lang-show="ru">Нарушение судебного порядка общения</h3><p lang-show="en">Golovinsky District Court, Case No. 2-3865/2025: daily 17:00–18:00 contact between father and son, ordered 25 November 2025 and obstructed since.</p><p lang-show="ru">Головинский суд, дело № 2-3865/2025: ежедневный звонок 17:00–18:00, назначен 25 ноября 2025 года и не исполняется.</p><a class="download" href="../penalties/#order-section" lang-show="en" style="color:#a52a17;font-weight:600;">Read the order →</a><a class="download" href="../penalties/#order-section" lang-show="ru" style="color:#a52a17;font-weight:600;">Читать определение →</a></div>
+<div class="evidence-card"><h3 lang-show="en">Court filings index</h3><h3 lang-show="ru">Индекс судебных документов</h3><p lang-show="en">Public-facing index of all six tracks with case numbers, courts, and status.</p><p lang-show="ru">Публичный список всех шести процессов.</p><a href="../legal-v2/" style="color:#a52a17;font-weight:600;" target="_blank">Read full document →</a></div>
+<div class="case-gototop"><a href="#case-top" lang-show="en">↑ Go to Top</a><a href="#case-top" lang-show="ru">↑ Наверх</a></div>
+</section>
+<section class="section" id="case-letters">
+<h2><span lang-show="en">6 · Public letters</span><span lang-show="ru">6 · Открытые письма</span></h2>
+<p lang-show="en">Selected correspondence that has been made public.</p>
+<p lang-show="ru">Избранная корреспонденция, ставшая публичной.</p>
+<ul class="letter-list">
+<li><div><div class="meta">2026-04 — Father's Day</div><div class="name" lang-show="en">Father's appeal · public version</div><div class="name" lang-show="ru">Обращение отца · публичная версия</div></div><a href="../fathers-appeal-v2/" style="color:#a52a17;font-weight:600;" target="_blank">Read →</a></li>
+<li><div><div class="meta">2024 — Hague</div><div class="name" lang-show="en">Statement to the Moscow City Court</div><div class="name" lang-show="ru">Заявление в Мосгорсуд</div></div><a href="../legal-v2/" style="color:#a52a17;font-weight:600;" target="_blank">Read →</a></li>
+</ul>
+<div class="case-gototop"><a href="#case-top" lang-show="en">↑ Go to Top</a><a href="#case-top" lang-show="ru">↑ Наверх</a></div>
+</section>
+<section class="share-cta" id="case-share">
+<h2 lang-show="en">Share Leon's story</h2>
+<h2 lang-show="ru">Расскажите о Леоне</h2>
+<p lang-show="en">A single share moves the case further than another letter does.</p>
+<p lang-show="ru">Один репост двигает дело дальше, чем ещё одно письмо.</p>
+<div class="share-row">
+<a class="btn btn-primary" href="https://www.change.org/p/expedite-leon-levenstein-s-release-through-international-diplomatic-intervention?recruiter=55168872&amp;recruited_by_id=5cbc0e80-c313-0130-9ba1-3c764e051d51&amp;utm_source=share_petition&amp;utm_campaign=share_petition&amp;utm_medium=copylink&amp;utm_content=cl_sharecopy_490348435_en-US%3A7" lang-show="en" rel="noopener" target="_blank">Sign the petition →</a>
+<a class="btn btn-primary" href="https://www.change.org/p/expedite-leon-levenstein-s-release-through-international-diplomatic-intervention?recruiter=55168872&amp;recruited_by_id=5cbc0e80-c313-0130-9ba1-3c764e051d51&amp;utm_source=share_petition&amp;utm_campaign=share_petition&amp;utm_medium=copylink&amp;utm_content=cl_sharecopy_490348435_en-US%3A7" lang-show="ru" rel="noopener" target="_blank">Подписать петицию →</a>
+<a class="btn btn-outline-light" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbringleonhome.org" rel="noopener" target="_blank">Facebook</a>
+<a class="btn btn-outline-light" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbringleonhome.org" rel="noopener" target="_blank">LinkedIn</a>
+<a class="btn btn-outline-light" href="https://t.me/share/url?url=https%3A%2F%2Fbringleonhome.org&amp;text=An+American+boy+held+in+Russia+since+Dec+2023.+Follow+%40bringleonhome_channel+for+updates." rel="noopener" target="_blank">Telegram</a>
+<a class="btn btn-outline-light" href="https://vk.com/id536403343" rel="noopener" target="_blank">VK</a>
+<a class="btn btn-outline-light" href="mailto:admin@levenstein.net?subject=Bring%20Leon%20Home&amp;body=An%20American%20boy%20held%20in%20Russia%20since%20Dec%202023.%20Read%20the%20story%3A%20https%3A%2F%2Fbringleonhome.org">Email</a>
+</div>
+<div class="case-gototop on-dark"><a href="#case-top" lang-show="en">↑ Go to Top</a><a href="#case-top" lang-show="ru">↑ Наверх</a></div>
+</section>
+</div>
+</section></div><script>
+function setBLHLang(lang) {
+  document.querySelectorAll('.blh-page-wrap').forEach(function(el) {
+    el.classList.remove('blh-lang-en', 'blh-lang-ru');
+    el.classList.add('blh-lang-' + lang);
+  });
+  try { localStorage.setItem('blh-lang', lang); } catch(e) {}
+}
+(function() {
+  var lang = 'en';
+  try { lang = localStorage.getItem('blh-lang') || 'en'; } catch(e){}
+  setBLHLang(lang);
+  var sep = new Date("2023-12-05T00:00:00Z");
+  var days = Math.floor((new Date() - sep) / 86400000);
+  document.querySelectorAll("#days-count").forEach(function(el) { el.textContent = days; });
+})();
+</script>
+</div>
+</main>
+<footer class="blh-footer">Bring Leon Home</footer>
+</body></html>

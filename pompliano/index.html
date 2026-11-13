@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>pompliano — Bring Leon Home</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="../assets/site.css">
+</head><body>
+<header class="blh-header"><a class="blh-brand" href="../">Bring Leon Home</a><nav class="blh-nav"><a href="../">Home</a><a href="../the-case/">The Case</a><a href="../take-action/">Take Action</a><a href="../press-v2/">Press</a><a href="../gallery/">Gallery</a><a href="../legal-proceedings-to-bring-leon-home/">Court Case Details</a><a href="../documentary-video-1/">Documentary Video</a><a href="../unpleasant-video/">Unpleasant Video</a><a href="../leons-video/">Leon&#x27;s Video</a><a href="../february-2nd-update/">February 2nd Update</a><a href="../may-5th-leon-update/">May 5th Leon Update</a><a href="../contact/">Contact</a></nav></header>
+<main class="blh-main">
+<div class="blh-block blh-code">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bring Leon Home: Diplomatic Briefing</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .chart-container { 
+            position: relative; 
+            width: 100%; 
+            max-width: 600px; 
+            margin-left: auto; 
+            margin-right: auto; 
+            height: 300px; 
+            max-height: 400px; 
+        }
+        @media (min-width: 768px) { 
+            .chart-container { height: 350px; } 
+        }
+        .interactive-card:hover { transform: translateY(-2px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); transition: all 0.2s; cursor: pointer; border-color: #3b82f6; }
+        .active-card { border-color: #2563eb; background-color: #eff6ff; }
+    </style>
+<!-- Chosen Palette: Slate & Blue Trust Palette (bg-slate-50, text-slate-800, accents of blue-600 and red-600) -->
+<!-- Application Structure Plan: A centralized 'Briefing Dashboard' designed to convert a scattered email correspondence into a cohesive, actionable presentation. It is structured into three clear phases: 1. The Crisis (understanding the stakes and failed past efforts), 2. The Communication Timeline (tracking the evolution of the Pompliano connection), and 3. The Actionable Strategy (outlining the specific executive targets). This logical grouping guides the user (presumably a decision-maker or ally) from understanding the problem to executing the solution, avoiding the non-linear confusion of reading raw email threads. -->
+<!-- Visualization & Content Choices: 1. Goal: Compare effectiveness of past vs. proposed efforts. Viz: Horizontal Bar Chart (Chart.js/Canvas). Justification: Clearly illustrates why standard legal/bureaucratic paths are exhausted and why the executive path is required. 2. Goal: Present chronological context. Viz: Interactive Timeline List. Justification: Allows user to see the progression of the network connection without reading a wall of text. 3. Goal: Actionable target profiles. Viz: Interactive Grid Cards. Justification: Focuses attention on the three specific executive targets (Vance, Vivek, Lutnick) and reveals their specific relevance on demand. NO SVG/Mermaid used. -->
+<!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+<div class="max-w-6xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden border border-slate-200">
+<header class="bg-slate-900 text-white p-6 md:p-10 text-center md:text-left">
+<h1 class="text-3xl md:text-5xl font-bold tracking-tight mb-3">Bring Leon Home</h1>
+<p class="text-lg md:text-xl text-slate-300 max-w-3xl">Strategic Briefing &amp; Diplomatic Action Plan for the Repatriation of Leon Levenstein.</p>
+</header>
+<div class="p-6 md:p-10 space-y-12">
+<section id="the-crisis">
+<div class="mb-6">
+<h2 class="text-2xl font-bold text-slate-800 border-b-2 border-blue-600 pb-2 inline-block">1. The Crisis &amp; The Exhausted Path</h2>
+<p class="mt-4 text-slate-600 leading-relaxed">
+                    This section outlines the immediate humanitarian crisis regarding five-year-old American citizen Leon Levenstein. It details the timeline of his detention in Russia following his mother's death and visualizes the exhaustion of standard legal and bureaucratic channels. Understanding these failed attempts is crucial to realizing why high-level executive intervention is the only remaining option.
+                </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+<div class="bg-slate-100 p-6 rounded-lg border border-slate-200">
+<h3 class="text-xl font-semibold mb-4 text-red-700">⚠️ Situation Summary</h3>
+<ul class="space-y-3 text-slate-700">
+<li><strong>The Subject:</strong> Leon Levenstein, 5-year-old U.S. Citizen.</li>
+<li><strong>The Incident:</strong> Mother died unexpectedly in Moscow (Dec 2023).</li>
+<li><strong>The Status:</strong> Placed under guardianship of a violent, antisemitic individual. The sole surviving parent (Nick Levenstein) has been denied all contact for over two years.</li>
+<li><strong>Efforts Made:</strong> 27+ months of effort, 6 trips to Russia, thousands of hours, and multiple legal actions (Custody, Hague Convention, Visitation) resulting in state-appointed "show trials."</li>
+<li><strong>The Roadblock:</strong> Rank-and-file U.S. State Department employees treat this as a standard family dispute, ignoring the geopolitical reality.</li>
+</ul>
+</div>
+<div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm">
+<h3 class="text-lg font-semibold text-center mb-2">Efficacy of Intervention Channels</h3>
+<p class="text-xs text-center text-slate-500 mb-4">Visualizing the thesis that bureaucratic paths yield zero progress compared to proposed executive action.</p>
+<div class="chart-container">
+<canvas id="efficacyChart"></canvas>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-slate-50 p-6 rounded-xl border border-slate-200" id="the-timeline">
+<div class="mb-6">
+<h2 class="text-2xl font-bold text-slate-800 border-b-2 border-blue-600 pb-2 inline-block">2. Network Activation Timeline</h2>
+<p class="mt-4 text-slate-600 leading-relaxed">
+                    This interactive timeline tracks the correspondence between Nick Levenstein, Caroline Hennigar (Polymer), and Anthony Pompliano. It demonstrates how a conference connection in New York evolved into a direct channel to influential figures in the Bitcoin/finance space who hold sway with the current U.S. administration. Select a date to view the communication details.
+                </p>
+</div>
+<div class="flex flex-col md:flex-row gap-6">
+<div class="md:w-1/3 flex flex-col gap-2" id="timeline-buttons-container">
+</div>
+<div class="md:w-2/3 bg-white p-6 rounded-lg shadow-inner border border-slate-200 min-h-[250px]" id="timeline-content-display">
+<div class="text-center text-slate-400 mt-10">
+<span class="text-4xl block mb-2">👆</span>
+                        Select a timeline event on the left to view the correspondence details.
+                    </div>
+</div>
+</div>
+</section>
+<section id="the-strategy">
+<div class="mb-6">
+<h2 class="text-2xl font-bold text-slate-800 border-b-2 border-blue-600 pb-2 inline-block">3. Executive Strategy &amp; Key Targets</h2>
+<p class="mt-4 text-slate-600 leading-relaxed">
+                    The objective is to bypass standard bureaucracy and elevate Leon's case to the President, First Lady Melania, or Secretary Rubio, placing him on the same negotiation agenda as Ukrainian children. This interactive matrix highlights three specific individuals within Anthony Pompliano's network who have the requisite access and influence. Click on a profile to reveal the strategic justification for contacting them.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6" id="target-cards-container">
+</div>
+<div class="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-r-lg hidden" id="target-detail-panel">
+<h3 class="text-2xl font-bold text-blue-900 mb-2" id="detail-title"></h3>
+<div class="mb-4">
+<span class="font-bold text-slate-700">🏛️ Relevance:</span>
+<p class="text-slate-800 mt-1" id="detail-relevance"></p>
+</div>
+<div>
+<span class="font-bold text-slate-700">🤝 Connection via Pompliano:</span>
+<p class="text-slate-800 mt-1" id="detail-connection"></p>
+</div>
+</div>
+</section>
+</div>
+<footer class="bg-slate-100 p-6 text-center text-sm text-slate-500 border-t border-slate-200">
+<p>Interactive Briefing compiled from provided correspondence records.</p>
+<p class="font-semibold mt-2">BringLeonHome.org</p>
+</footer>
+</div>
+<script>
+    const ctx = document.getElementById('efficacyChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Russian Legal System', 'US State Dept (Rank & File)', 'Executive Diplomatic Intervention (Proposed)'],
+            datasets: [{
+                label: 'Estimated Viability / Progress Score',
+                data: [2, 5, 95],
+                backgroundColor: [
+                    'rgba(239, 68, 68, 0.7)', 
+                    'rgba(245, 158, 11, 0.7)', 
+                    'rgba(59, 130, 246, 0.8)'   
+                ],
+                borderColor: [
+                    'rgb(220, 38, 38)',
+                    'rgb(217, 119, 6)',
+                    'rgb(37, 99, 235)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    max: 100,
+                    title: { display: true, text: 'Viability Score (%)' }
+                }
+            },
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let label = context.dataset.label || '';
+                            if (label) { label += ': '; }
+                            if (context.parsed.x !== null) { label += context.parsed.x + '%'; }
+                            return label;
+                        }
+                    }
+                }
+            }
+        }
+    });
+
+    const timelineData = [
+        {
+            id: 'evt1',
+            date: 'Feb 14, 2026',
+            title: 'Initial Outreach to Polymer',
+            sender: 'Nick Levenstein',
+            recipient: 'Caroline Hennigar',
+            content: 'Following a NYC conference, Nick reaches out to Caroline. He expresses his primary reason for attending: making political connections to assist his detained son. He asks to be connected with Bo Hines without any business solicitation.'
+        },
+        {
+            id: 'evt2',
+            date: 'Feb 20, 2026',
+            title: 'Follow-up & Forwarding to Pompliano',
+            sender: 'Nick & Caroline',
+            recipient: 'Anthony Pompliano',
+            content: 'Nick follows up with a drafted letter for Bo Hines. Caroline forwards the entire correspondence, including the letter, directly to Anthony Pompliano to see how he might assist.'
+        },
+        {
+            id: 'evt3',
+            date: 'Feb 20-21, 2026',
+            title: 'Pompliano Engages',
+            sender: 'Anthony Pompliano & Nick',
+            recipient: 'Nick Levenstein',
+            content: 'Pompliano asks: "Where can I learn more about the situation? I need to understand everything before I know how to help..." Nick responds with "The Diplomatic Ask," explaining that legal paths are dead and Leon must be included in Ukraine war negotiation agendas, referencing Melania Trump\'s past successes.'
+        },
+        {
+            id: 'evt4',
+            date: 'Follow-Up',
+            title: 'Strategic White House Targeting',
+            sender: 'Nick Levenstein',
+            recipient: 'Anthony Pompliano',
+            content: 'Nick formally requests Pompliano to utilize his specific network in the Bitcoin/finance space to bypass the State Department. He identifies three specific targets: VP J.D. Vance, Vivek Ramaswamy, and Howard Lutnick.'
+        }
+    ];
+
+    const timelineButtonsContainer = document.getElementById('timeline-buttons-container');
+    const timelineContentDisplay = document.getElementById('timeline-content-display');
+    let activeTimelineId = null;
+
+    function renderTimelineButtons() {
+        timelineButtonsContainer.innerHTML = '';
+        timelineData.forEach(item => {
+            const btn = document.createElement('button');
+            btn.className = `text-left p-4 rounded-lg border-2 bg-white transition-colors duration-200 ${activeTimelineId === item.id ? 'border-blue-600 bg-blue-50' : 'border-transparent hover:border-slate-300 shadow-sm'}`;
+            btn.innerHTML = `
+                <span class="block text-xs font-bold text-blue-600 mb-1">🗓️ ${item.date}</span>
+                <span class="block font-semibold text-slate-800">${item.title}</span>
+            `;
+            btn.onclick = () => selectTimelineEvent(item.id);
+            timelineButtonsContainer.appendChild(btn);
+        });
+    }
+
+    function selectTimelineEvent(id) {
+        activeTimelineId = id;
+        renderTimelineButtons();
+        const event = timelineData.find(e => e.id === id);
+        
+        timelineContentDisplay.innerHTML = `
+            <div class="animate-fade-in">
+                <h3 class="text-xl font-bold text-slate-800 mb-2">${event.title}</h3>
+                <div class="flex items-center gap-2 mb-4 text-sm bg-slate-100 p-2 rounded inline-flex">
+                    <span class="font-semibold">From:</span> <span class="text-slate-600">${event.sender}</span>
+                    <span class="mx-2">➡️</span>
+                    <span class="font-semibold">To:</span> <span class="text-slate-600">${event.recipient}</span>
+                </div>
+                <p class="text-slate-700 leading-relaxed text-lg">${event.content}</p>
+            </div>
+        `;
+    }
+    
+    renderTimelineButtons();
+
+    const targetsData = [
+        {
+            id: 'vance',
+            name: 'Vice President J.D. Vance',
+            icon: '🇺🇸',
+            relevance: 'As Vice President, Vance has direct, daily access to the President. He has the authority to elevate humanitarian and diplomatic issues directly to the Oval Office.',
+            connection: 'Pompliano has extensively covered Vance\'s pro-Bitcoin stance. As a leading voice in a community heavily courted by the administration, a humanitarian request from Pompliano would bypass standard screening.'
+        },
+        {
+            id: 'vivek',
+            name: 'Vivek Ramaswamy',
+            icon: '📈',
+            relevance: 'Ramaswamy remains a crucial inner-circle advisor and driving force in current initiatives. He is highly visible, has a direct line to the President, and favors non-bureaucratic solutions.',
+            connection: 'Ramaswamy is a major proponent of Bitcoin, having spoken at conferences Pompliano is involved in. Shared networks in the crypto-political sphere make him highly accessible for alternative solutions.'
+        },
+        {
+            id: 'lutnick',
+            name: 'Howard Lutnick',
+            icon: '🏢',
+            relevance: 'Lutnick operates at the highest echelons of the President\'s trusted business and political advisors, deeply involved in transition and economic planning.',
+            connection: 'Pompliano recently interviewed Lutnick regarding his Bitcoin holdings. This established rapport outside standard political channels makes Lutnick an incredibly powerful backchannel to the Oval Office.'
+        }
+    ];
+
+    const targetCardsContainer = document.getElementById('target-cards-container');
+    const targetDetailPanel = document.getElementById('target-detail-panel');
+    const detailTitle = document.getElementById('detail-title');
+    const detailRelevance = document.getElementById('detail-relevance');
+    const detailConnection = document.getElementById('detail-connection');
+    let activeTargetId = null;
+
+    function renderTargets() {
+        targetCardsContainer.innerHTML = '';
+        targetsData.forEach(target => {
+            const card = document.createElement('div');
+            card.className = `interactive-card bg-white p-6 rounded-lg border-2 text-center transition-all ${activeTargetId === target.id ? 'active-card' : 'border-slate-200 shadow-sm'}`;
+            card.innerHTML = `
+                <div class="text-4xl mb-3">${target.icon}</div>
+                <h4 class="font-bold text-slate-800">${target.name}</h4>
+                <p class="text-xs text-blue-600 mt-2 font-semibold">Click for Strategy Details</p>
+            `;
+            card.onclick = () => selectTarget(target.id);
+            targetCardsContainer.appendChild(card);
+        });
+    }
+
+    function selectTarget(id) {
+        activeTargetId = id;
+        renderTargets();
+        const target = targetsData.find(t => t.id === id);
+        
+        detailTitle.textContent = target.icon + ' ' + target.name;
+        detailRelevance.textContent = target.relevance;
+        detailConnection.textContent = target.connection;
+        
+        targetDetailPanel.classList.remove('hidden');
+        targetDetailPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    renderTargets();
+
+</script>
+</div>
+</main>
+<footer class="blh-footer">Bring Leon Home</footer>
+</body></html>

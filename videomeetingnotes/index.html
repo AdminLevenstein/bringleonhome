@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VideoMeetingNotes — Bring Leon Home</title>
+<meta name="description" content="">
+<link rel="stylesheet" href="../assets/site.css">
+</head><body>
+<header class="blh-header"><a class="blh-brand" href="../">Bring Leon Home</a><nav class="blh-nav"><a href="../">Home</a><a href="../the-case/">The Case</a><a href="../take-action/">Take Action</a><a href="../press-v2/">Press</a><a href="../gallery/">Gallery</a><a href="../legal-proceedings-to-bring-leon-home/">Court Case Details</a><a href="../documentary-video-1/">Documentary Video</a><a href="../unpleasant-video/">Unpleasant Video</a><a href="../leons-video/">Leon&#x27;s Video</a><a href="../february-2nd-update/">February 2nd Update</a><a href="../may-5th-leon-update/">May 5th Leon Update</a><a href="../contact/">Contact</a></nav></header>
+<main class="blh-main">
+<div class="blh-block blh-code">
+<div class="leon-playbook-wrapper" id="top">
+<style>
+/* --- SCOPED CSS FOR SQUARESPACE --- */
+.leon-playbook-wrapper {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f9f9f9; /* Light gallery background */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Navigation & Sticky Header */
+.leon-nav {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px;
+  z-index: 999;
+  border-bottom: 1px solid #eee;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin: -20px -20px 30px -20px; /* Offset parent padding */
+  text-align: center;
+}
+
+.leon-nav h1 {
+  font-size: 1.2rem;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #222;
+}
+
+.leon-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.leon-nav a {
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #555;
+  transition: all 0.2s ease;
+}
+
+.leon-nav a:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* Section Styling */
+.leon-section {
+  margin-bottom: 50px;
+}
+
+.leon-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border-left: 4px solid #333;
+  padding-left: 15px;
+  color: #111;
+}
+
+/* "Go to top" link */
+.leon-top-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 0.75rem;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #555;
+}
+.leon-top-link:hover {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* CARD GRID SYSTEM (The "Gallery" Look) */
+.script-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default mobile 1 column */
+  gap: 20px;
+}
+
+/* Card Styling */
+.script-card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  transition: transform 0.2s ease;
+}
+
+.script-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.06);
+}
+
+.script-card h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: #888;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+/* Side-by-Side Flex Layout inside Cards */
+.lang-row {
+  display: flex;
+  flex-direction: column; /* Mobile first: stacked */
+  gap: 15px;
+}
+
+.eng-col {
+  flex: 1;
+  font-weight: 600;
+  color: #111;
+  font-size: 1.05rem;
+}
+
+.rus-col {
+  flex: 1;
+  background: #f4f6f8;
+  padding: 12px;
+  border-radius: 6px;
+  border-left: 3px solid #007bff;
+}
+
+.rus-text {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.translit-text {
+  font-family: 'Courier New', monospace; /* Monospace for readability */
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  display: block;
+}
+
+/* Special Highlighters */
+.highlight-box {
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  padding: 15px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.zoom-btn {
+  display: inline-block;
+  background: #2D8CFF;
+  color: #fff !important;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.copy-block {
+  background: #222;
+  color: #00ff9d; /* Matrix green for code feel */
+  padding: 15px;
+  border-radius: 6px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  font-size: 0.8rem;
+  overflow-x: auto;
+}
+
+/* DESKTOP MEDIA QUERY */
+@media (min-width: 768px) {
+  .script-grid {
+    grid-template-columns: 1fr 1fr; /* 2 Cards per row on desktop */
+  }
+  
+  .lang-row {
+    flex-direction: row; /* Side by side text inside cards on desktop */
+  }
+  
+  .script-card.full-width {
+    grid-column: span 2;
+  }
+}
+</style>
+<nav class="leon-nav">
+<h1>Leon Daily Call Playbook</h1>
+<ul>
+<li><a href="#zoom">Zoom</a></li>
+<li><a href="#opening">Opening</a></li>
+<li><a href="#papa-story">Papa’s Story</a></li>
+<li><a href="#questions">Questions</a></li>
+<li><a href="#interference">Interference</a></li>
+<li><a href="#lawyers">Lawyer Letters</a></li>
+<li><a href="#report">Report</a></li>
+</ul>
+</nav>
+<section class="leon-section" id="zoom">
+<h2>Active Zoom Details</h2>
+<div class="script-card full-width">
+<h3>Time: 17:00–18:00 Moscow (Daily)</h3>
+<p><strong>Recurring Meeting (365 Days)</strong> already sent to Andrei.</p>
+<a class="zoom-btn" href="https://zoom.us/j/99013495559?pwd=bExyB5LD98gefN6eoo6Wfop7hQ6lTv.1" target="_blank">LAUNCH ZOOM MEETING</a>
+<div style="margin-top: 15px; font-size: 0.9rem;">
+<p><strong>Meeting ID:</strong> 990 1349 5559<br/>
+<strong>Passcode:</strong> 987117</p>
+</div>
+</div>
+<a class="leon-top-link" href="#top">↑ Go to top</a>
+</section>
+<section class="leon-section" id="opening">
+<h2>Opening &amp; Safety</h2>
+<div class="script-grid">
+<div class="script-card">
+<h3>Warm Greeting</h3>
+<div class="lang-row">
+<div class="eng-col">
+          “Hi Leon! I’m so happy to see you. I missed you every day.”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Леон, привет! Я так рад тебя видеть. Я скучал по тебе каждый день.»</span>
+<span class="translit-text">Leon, privyét! Ya tak rad tebya vídet’. Ya skuchál po tebé kázhdy den’.</span>
+</div>
+</div>
+</div>
+<div class="script-card">
+<h3>Establish Safety</h3>
+<div class="lang-row">
+<div class="eng-col">
+          “You can tell me anything you want. You always decide what we talk about. I love you no matter what.”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Ты можешь рассказать мне всё, что хочешь. Ты сам выбираешь, о чём мы говорим. Я люблю тебя всегда, что бы ни было.»</span>
+<span class="translit-text">Ty mózhesh rasskazát’ mne vsyo, chto khóchesh. Ty sam vybiráesh’, o chyom my govorím. Ya lyublyú tebya vsegdá, chto by ni býlo.</span>
+</div>
+</div>
+</div>
+<div class="script-card full-width">
+<h3>If No Translator Appears</h3>
+<div class="lang-row">
+<div class="eng-col">
+          “It’s okay if there is no translator. I will listen carefully now, and later I can listen again and understand everything.”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Всё хорошо, даже если нет переводчика. Я внимательно послушаю сейчас, а потом ещё раз всё переслушаю и пойму.»</span>
+<span class="translit-text">Vsyo khoroshó, dázhe yésli nét perevódchika. Ya vnimátel’no poslúshayú seychás, a potóm yeshchó raz vsyo pereslúshayú i paymú.</span>
+</div>
+</div>
+</div>
+</div>
+<a class="leon-top-link" href="#top">↑ Go to top</a>
+</section>
+<section class="leon-section" id="papa-story">
+<h2>Papa’s Story for Leon</h2>
+<div class="script-card full-width">
+<h3>What Papa Has Been Doing</h3>
+<div class="lang-row">
+<div class="eng-col">
+        “Leon, since we were separated, I have been looking for you every single day.
+        I flew to Russia many times, went to offices and courts, and spoke to many people
+        to ask them to let us talk and be together again.
+        <br/><br/>
+        Almost every day I also recorded little video messages for you.
+        I put some of them on a website with your name, so that one day you can see
+        how much I was thinking about you and talking to you.
+        The website is: https://www.bringleonhome.org/gallery.
+        In Russia there might be technical problems seeing it, but if you like the videos
+        I can put many more there for you.
+        <br/><br/>
+        I talk about you in different countries and ask people to help keep you safe
+        and bring you home. I will never stop loving you and looking for you.
+        <br/><br/>
+        I am also talking with the court — the people who decide the rules
+        between me and Andrei — so they can say when I am allowed
+        to see you in person again.
+        <br/><br/>
+        I am trying to arrange for a neighbor to bring you some pictures
+        of you, Mama and me together, and some books and toys I know you like.”
+      </div>
+<div class="rus-col">
+<span class="rus-text">«Леон, с тех пор как нас разлучили, я каждый день ищу тебя. Я много раз прилетал в Россию, ходил по разным учреждениям и в суд, разговаривал с многими людьми, чтобы просить, чтобы нам разрешили снова общаться и быть вместе.</span>
+<span class="rus-text">Почти каждый день я записывал для тебя маленькие видеосообщения. Некоторые из них я разместил на сайте с твоим именем, чтобы однажды ты смог увидеть, как сильно я о тебе думал и как разговаривал с тобой. Этот сайт: https://www.bringleonhome.org/gallery. В России могут быть технические сложности, чтобы его открыть, но если тебе понравятся эти видео, я могу выложить туда ещё много.</span>
+<span class="rus-text">Я рассказываю о тебе в разных странах и прошу людей помогать, чтобы ты был в безопасности и чтобы мы могли быть вместе. Я никогда не перестану любить тебя и искать тебя.</span>
+<span class="rus-text">Я также разговариваю с судом — это люди, которые решают спор между мной и Андреем, — чтобы они сказали, когда мне разрешат снова увидеть тебя лично.</span>
+<span class="rus-text">Я стараюсь договориться, чтобы сосед принёс тебе фотографии, где мы вместе — ты, мама и я, а ещё книжки и игрушки, которые я знаю, что ты любишь.»</span>
+<span class="translit-text">Leon, s tekh por kak nas razluchíli, ya kázhdy den’ ishchú tebya. Ya mnógo raz priletál v Rossíyu, khodíl po ráznym uchrezhdéniyam i v sud, razgovárival s mnógimi lyudyámi, chtóby prosít’, chtóby nam razreshílí snóva obshchát’sya i byt’ vméste.</span>
+<span class="translit-text">Póchti kázhdy den’ ya zapísyval dlya tebya mál’en’kiye videosoobshchéniya. Nekotóryye iz nikh ya razmestíl na sayte s tvoím ímenem, chtóby odnázdy ty smóg uvídet’, kak síl’no ya o tebé dumál i kak razgovárival s toboy. Etot sayt: https://www.bringleonhome.org/gallery. V Rossíi mógt byt’ tekhnícheskiye slozhnosti, chtóby yego otkrýt’, no yésli tebé ponrávyatsya eti vídeo, ya mógu výlozhit’ tuda yeshchó mnógo.</span>
+<span class="translit-text">Ya rasskázivayu o tebé v ráznukh stránakh i prošú lyudéy pomogát’, chtóby ty byl v bezopásnosti i chtóby my mogli byt’ vméste. Ya nikogdá ne perestánu lyubít’ tebya i iskát’ tebya.</span>
+<span class="translit-text">Ya tákzhe razgovárivayu s sudóm — eto lyúdi, kotóryye resháyut spór mezhdú mnóy i Andréyem, — chtóby oni skazáli, kogdá mne razreshát snóva uvídet’ tebya líchno.</span>
+<span class="translit-text">Ya staráyus’ dogovorítsya, chtóby sosed prinёс tebé fotografíi, gde my vméste — ty, máma i ya, a yeshchó knízhki i igrúshki, kotóryye ya znáyu, chto ty lyúbish’.</span>
+</div>
+</div>
+</div>
+<a class="leon-top-link" href="#top">↑ Go to top</a>
+</section>
+<section class="leon-section" id="questions">
+<h2>Core Conversation Starters</h2>
+<div class="script-grid">
+<div class="script-card">
+<h3>Daily Life &amp; Year</h3>
+<div class="lang-row">
+<div class="eng-col">
+          “Tell me about your day. What was the best part?”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Расскажи мне про твой день. Что было самое хорошее?»</span>
+<span class="translit-text">Rasskazhí mne pro tvoy den’. Chto bylo sámoe khoróshye?</span>
+</div>
+</div>
+<hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;"/>
+<div class="lang-row">
+<div class="eng-col">
+          “What did you like most this year?”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Что тебе больше всего понравилось в этом году?»</span>
+<span class="translit-text">Chto tebé bólshe vsevó ponrávilos’ v étom godú?</span>
+</div>
+</div>
+<hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;"/>
+<div class="lang-row">
+<div class="eng-col">
+          “What games do you like to play now?”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«В какие игры тебе нравится играть сейчас?»</span>
+<span class="translit-text">V kakíe ígry tebé nrávitsya igrát’ seychás?</span>
+</div>
+</div>
+</div>
+<div class="script-card">
+<h3>Environment &amp; Support</h3>
+<div class="lang-row">
+<div class="eng-col">
+          “Who do you spend the most time with?”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«С кем ты проводишь больше всего времени?»</span>
+<span class="translit-text">S kem ty provódiš’ bólshe vsevó vrémeni?</span>
+</div>
+</div>
+<hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;"/>
+<div class="lang-row">
+<div class="eng-col">
+          “Who helps you when you’re sad?”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Кто помогает тебе, когда тебе грустно?»</span>
+<span class="translit-text">Kto pomogáet tebé, kogdá tebé grústno?</span>
+</div>
+</div>
+<hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;"/>
+<div class="lang-row">
+<div class="eng-col">
+          “Where do you sleep at night? Do you like it there?”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Где ты спишь ночью? Тебе там нравится?»</span>
+<span class="translit-text">Gde ty spísh nóchyu? Tebé tam nrávitsya?</span>
+</div>
+</div>
+</div>
+<div class="script-card">
+<h3>Cars &amp; Happy Memories</h3>
+<div class="lang-row">
+<div class="eng-col">
+          “Do you still like cars and toy cars?”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Тебе всё ещё нравятся машинки?»</span>
+<span class="translit-text">Tebé vsyo eshchó nrávyatsya mashínki?</span>
+</div>
+</div>
+<hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;"/>
+<div class="lang-row">
+<div class="eng-col">
+          “Do you remember the cartoon ‘Cars’ with Lightning McQueen?”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Ты помнишь мультфильм “Тачки” с Молнией Маккуином?»</span>
+<span class="translit-text">Ty pómnish mul’tfílm “Táchki” s Mólniey Makkúinom?</span>
+</div>
+</div>
+<hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;"/>
+<div class="lang-row">
+<div class="eng-col">
+          “Which car in that cartoon is your favorite?”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Какая машинка там твоя самая любимая?»</span>
+<span class="translit-text">Kakáya mashínka tam tvoyá sámaya lyubímaya?</span>
+</div>
+</div>
+<hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;"/>
+<div class="lang-row">
+<div class="eng-col">
+          “Do you remember the birthday cake with cars that Mama made for you when you turned two?”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Ты помнишь торт с машинками, который мама сделала тебе на два годика?»</span>
+<span class="translit-text">Ty pómnish tort s mashínkami, kotóryy máma sdélala tebé na dva gódika?</span>
+</div>
+</div>
+</div>
+<div class="script-card">
+<h3>Coaching Check</h3>
+<div class="lang-row">
+<div class="eng-col">
+          “Before we talked today, did anyone tell you anything about our call?”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Перед нашим звонком кто-нибудь говорил тебе что-то про наш разговор?»</span>
+<span class="translit-text">Pered nashim zvonkóm kto-nibúd’ govoríl tebé chto-to pro nash razgovór?</span>
+</div>
+</div>
+<hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;"/>
+<div class="lang-row">
+<div class="eng-col">
+          “When people talk about me, what do they say?”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Когда люди говорят про меня, что они говорят?»</span>
+<span class="translit-text">Kogdá lyudi govoryát pro menya, chto oní govoryát?</span>
+</div>
+</div>
+</div>
+<div class="script-card">
+<h3>Parental Authority</h3>
+<div class="lang-row">
+<div class="eng-col">
+          “When you want to talk to me, who do you ask?”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Если ты хочешь поговорить со мной, к кому ты обращаешься?»</span>
+<span class="translit-text">Yésli ty khóchesh pogovorít’ so mnóy, k komu ty obraščáyesh’sya?</span>
+</div>
+</div>
+<hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;"/>
+<div class="lang-row">
+<div class="eng-col">
+          “Do you have your own phone or tablet?”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«У тебя есть свой телефон или планшет?»</span>
+<span class="translit-text">U tebya yest’ svoy telefón ili planshét?</span>
+</div>
+</div>
+<hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;"/>
+<div class="lang-row">
+<div class="eng-col">
+          “Who decides when you can talk to me?”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Кто решает, когда ты можешь со мной разговаривать?»</span>
+<span class="translit-text">Kto resháet, kogdá ty mózhesh so mnóy razgovarívat’?</span>
+</div>
+</div>
+</div>
+<div class="script-card">
+<h3>Name Issue</h3>
+<div class="lang-row">
+<div class="eng-col">
+          “What do people call you at home?”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Как тебя называют дома?»</span>
+<span class="translit-text">Kak tebya nazyváyut dóma?</span>
+</div>
+</div>
+<hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;"/>
+<div class="lang-row">
+<div class="eng-col">
+          “What do your teachers and friends call you?”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Как тебя называют учителя и друзья?»</span>
+<span class="translit-text">Kak tebya nazyváyut uchitelyá i druz’yá?</span>
+</div>
+</div>
+<hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;"/>
+<div class="lang-row">
+<div class="eng-col">
+          “What name is written on your books or backpack?”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Какое имя написано на твоих книгах или рюкзаке?»</span>
+<span class="translit-text">Kakóye ímya napísano na tvoiíkh knígakh ili ryukzaké?</span>
+</div>
+</div>
+<hr style="border: 0; border-top: 1px solid #eee; margin: 15px 0;"/>
+<div class="lang-row">
+<div class="eng-col" style="font-size:0.9rem; font-weight:400;">
+<em style="color:#d9534f;">Response if he uses another name:</em><br/>
+          “Your mother and I chose the name Leon together. It is in your passport, and it’s very special. It is your name, and you can always tell me what you like best.”
+        </div>
+<div class="rus-col">
+<span class="rus-text">«Имя Леон мы с мамой выбрали вместе. Оно записано в твоём паспорте, и оно очень особенное. Это твоё имя, и ты всегда можешь сказать мне, как тебе больше нравится, чтобы тебя называли.»</span>
+<span class="translit-text">Ímya Leon my s mámoy výbrali vméste. Ono zapísano v tvoyóm pásporte, i ono óchen’ osobénnoye. Eto tvoyó ímya, i ty vsegdá mózhesh skazát’ mne, kak tebé bólshe nrávitsya, chtóby tebya nazyváli.</span>
+</div>
+</div>
+</div>
+</div>
+<a class="leon-top-link" href="#top">↑ Go to top</a>
+</section>
+<section class="leon-section" id="interference">
+<h2>Handling Interference (For Andrei)</h2>
+<div class="highlight-box">
+<strong>Strategy:</strong> Say these once, calmly. Do not argue. If he continues, refocus on Leon and record what happened for your lawyers.
+  </div>
+<br/>
+<div class="script-card full-width">
+<h3>The Reminder</h3>
+<div class="lang-row">
+<div class="eng-col">
+        “Andrei, the judge ordered daily communication with video from 17:00 to 18:00. I am just following the court’s ruling.”
+      </div>
+<div class="rus-col">
+<span class="rus-text">«Андрей, суд установил ежедневное общение с видеосвязью с 17 до 18 часов. Я просто выполняю определение суда.»</span>
+<span class="translit-text">Andreý, sud ustanovíl ezhednévnoye obshchéniye s videosvyaz’yu s semnádsati do vosmnádtsati chasóv. Ya prósto vypolnyáyu opredelenié sudá.</span>
+</div>
+</div>
+</div>
+<div class="script-card full-width">
+<h3>If He Continues</h3>
+<div class="lang-row">
+<div class="eng-col">
+        “I understand. I will inform my lawyers, and they will clarify this with the court.”
+      </div>
+<div class="rus-col">
+<span class="rus-text">«Я понимаю. Я сообщу об этом своим адвокатам, и они уточнят это в суде.»</span>
+<span class="translit-text">Ya ponimáyu. Ya soobshchú ob étom svoím advokatám, i oní utochnát eto v sudé.</span>
+</div>
+</div>
+</div>
+<a class="leon-top-link" href="#top">↑ Go to top</a>
+</section>
+<section class="leon-section" id="lawyers">
+<h2>Lawyer Templates (For Andrei &amp; His Lawyer)</h2>
+<div class="script-grid">
+<div class="script-card">
+<h3>Letter to Andrei (English)</h3>
+<div class="copy-block">Andrei Yuryevich,
+
+We remind you that the Golovinsky District Court’s ruling of 25.11.2025
+(Case No. 2-3865/2025) requires daily communication between
+Nikolai Levenshtein and his son, Leon Levenshtein, from 17:00 to 18:00
+Moscow time, via telephone, including video communication.
+
+This is a mandatory court obligation.
+
+To comply smoothly, a daily Zoom link and call details have already been
+provided to you (recurring 365-day meeting). If another device or number
+is more convenient, please inform us.
+
+If necessary, the father is also prepared to provide a dedicated phone
+for Leon to facilitate these calls.
+
+We ask you not to interfere with communication, not to shorten the call,
+and not to be present if this distracts the child.
+Any deviations from the court-ordered schedule and format will be
+recorded and submitted to the court.
+
+Respectfully,
+Roman Meyer
+Tatiana Gromyko
+Attorneys for N. Levenshtein</div>
+</div>
+<div class="script-card">
+<h3>Letter to Andrei (Russian)</h3>
+<div class="copy-block">Андрей Юрьевич,
+
+Напоминаем, что определение Головинского районного суда
+от 25.11.2025 г. (дело № 2-3865/2025) обязывает обеспечивать
+ежедневное общение Николаса Левенштейна с его сыном
+Леоном Левенштейном с 17:00 до 18:00 по московскому времени
+по телефону, включая видеосвязь.
+
+Это обязательное требование суда.
+
+Для аккуратного исполнения порядка общения Вам уже направлена
+ежедневная рекуррентная Zoom-ссылка и данные для подключения
+(365-дневная встреча). Если Вам удобнее использовать другой
+номер телефона или устройство, просим сообщить об этом.
+
+При необходимости отец также готов предоставить Леону
+отдельный телефон для соблюдения установленного порядка общения.
+
+Просим не препятствовать общению, не сокращать время звонка
+и не присутствовать, если это отвлекает ребёнка.
+Любые отклонения от установленного судом порядка и формата общения
+будут фиксироваться и представлены суду.
+
+С уважением,
+Роман Мейер
+Татьяна Громыко
+Адвокаты Н. Левенштейна</div>
+</div>
+</div>
+<a class="leon-top-link" href="#top">↑ Go to top</a>
+</section>
+<section class="leon-section" id="report">
+<h2>Daily Report Template</h2>
+<div class="script-card full-width">
+<p>Copy and paste this into your notes after every call.</p>
+<div class="copy-block" style="background: #fff; color: #333; border: 1px solid #ccc;">
+Date:
+Start Time (Moscow):
+End Time (Moscow):
+Duration:
+Call Medium (Zoom / WhatsApp / other):
+Video On? (Yes/No):
+Interpreter? (Yes/No):
+
+1. INITIATION
+- Who initiated the call?
+- Was it on time (17:00)? If not, why?
+
+2. LEON'S EMOTIONAL STATE
+- Mood at start:
+- Mood during call:
+- Mood at end:
+- Any signs of fear, anxiety, or coaching?
+
+3. CONTENT
+- Main topics discussed:
+- Mentions of people he lives with / spends time with:
+- Mentions of school / activities:
+- Mentions of where he sleeps:
+- Mentions of cars / “Cars” movie / birthday cake:
+- Any reaction if Papa’s videos or website are mentioned:
+
+4. NAME-RELATED STATEMENTS
+- What people call him at home:
+- What teachers / friends call him:
+- Any mention of attempts to change his name:
+
+5. INTERFERENCE / VIOLATIONS
+- Did Andrei speak during the call?
+- Did he tell Leon what to say / not say?
+- Was the call shortened or blocked?
+- Any refusal to use video / Zoom?
+
+6. ACTION ITEMS FOR LAWYERS (ROMAN &amp; TATIANA)
+- Points to raise:
+- Evidence to highlight:
+    </div>
+</div>
+<a class="leon-top-link" href="#top">↑ Go to top</a>
+</section>
+</div>
+</div>
+</main>
+<footer class="blh-footer">Bring Leon Home</footer>
+</body></html>
